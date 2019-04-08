@@ -1,0 +1,17 @@
+{
+  "name": "projetosenac",
+  "description": "documentar meus aprendizados",
+  "main": "index.js",
+  "authors": [
+    "DiovaneLuisPachetiNunes"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DiovanePacheti/senacgraduacao2019",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

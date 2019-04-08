@@ -1,0 +1,19 @@
+{
+  "name": "projetosenac",
+  "version": "1.0.0",
+  "description": "documentar meus aprendizados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DiovaneLuisPachetiNunes",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiovanePacheti/projetosenacgraduacao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DiovanePacheti/projetosenacgraduacao/issues"
+  },
+  "homepage": "https://github.com/DiovanePacheti/projetosenacgraduacao#readme"
+}
