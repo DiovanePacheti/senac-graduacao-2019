@@ -51,7 +51,7 @@ function verificaTriangulo(){
         resp = " Os lados" + ladosIguais + " são iguais formando um triângulo" + triangulo;
 
     }else if(ladoA != ladoB && ladoA != ladoC && ladoB != ladoC){             
-	    triangulo = Escaleno;                                                                                                             
+	    triangulo = "Escaleno";                                                                                                             
 	    resp = " O lado A = " + ladoA + "  lado B = " + ladoB + " lado C = " + ladoC + " são lados diferentes formando um triângulo " + triangulo;
     }
     var outTriangulo = document.getElementById("outTriangulo");
