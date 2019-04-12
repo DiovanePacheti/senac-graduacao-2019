@@ -1,13 +1,21 @@
 function calcularDuracao(){
 
     var inHoraInicial = document.getElementById("inHoraInicial");
-    inHoraInicial = Number(inHoraInicial.value);
+    var inHoraInicial = Number(inHoraInicial.value);
 
     var inHoraFinal = document.getElementById("inHoraFinal");
-    inHoraFinal = Number(inHoraFinal.value);
+    var inHoraFinal = Number(inHoraFinal.value);
+
+    var duracao;
+
+    if(inHoraInicial < inHoraFinal){
+       duracao = inHoraFinal - inHoraInicial;
+    }else{
+       duracao = (24+inHoraFinal) - inHoraInicial;
+    }
 
     var outDuracao = document.getElementById("outDuracao");
-    outDuracao.textContent = "saida ";
+    outDuracao.textContent = "Duração do jogo  " + duracao + " hora(s)";
 
 }//fim da function
 var btCalcularDuracao = document.getElementById("btCalcularDuracao");
