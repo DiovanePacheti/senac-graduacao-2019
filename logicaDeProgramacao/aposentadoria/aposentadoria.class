@@ -1,0 +1,58 @@
+package aposentadoria;
+import java.util.Scanner;
+/**
+ *
+ * @author redes
+ */
+public class Aposentadoria {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        int contribuicao = 0;
+        int idade = 0;
+        int faltaIdade = 0;
+        int faltaContribuicao = 0;
+        String saida = "";
+        boolean sair = false;
+         
+        Scanner scan = new Scanner(System.in);
+        
+        do{
+            System.out.print("Tempo de contribuição : ");
+            contribuicao = scan.nextInt();
+            
+            System.out.print("Idade : ");
+            idade = scan.nextInt();
+            
+            if(idade >= 60 && contribuicao >= 30){
+                  saida = "Pode se aposentar ! ";
+            }else{
+                  faltaIdade = 60 - idade;
+                  faltaContribuicao = 30 - contribuicao;
+            
+                  if(faltaIdade > faltaContribuicao){
+                        saida = "Faltam " + faltaIdade + " anos pra aposentadoria por idade ";
+                  }else{
+                        saida = "Faltam " + faltaContribuicao + " anos de tempo de contribuição para aposentadoria";
+                  }// fim da estrutura if enterna
+            }//fim da estrutura condicional 
+        
+            System.out.print(saida);
+            System.out.println("");
+            System.out.print("Deseja realizar novamente a operação ( S - sim / N - não ) : ");
+            String escolha = scan.next();
+            
+            if(escolha.equalsIgnoreCase("n")){
+                sair = true;
+            }//fim do if
+            
+        }while(!sair);
+        
+        
+
+    }//fim do method main
+    
+}//fim da class aposentadoria
