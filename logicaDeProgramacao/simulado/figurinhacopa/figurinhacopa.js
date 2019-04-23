@@ -5,7 +5,7 @@ function figurinhas(){
 
 	var qtdpacote = Math.trunc(valor / 2);
 	var qtdfigurinhas = qtdpacote * 5;
-        var troco = valor%2;
+        var troco = valor % 2;
 
 	var outPacotes = document.getElementById("outPacotes");
 	outPacotes.textContent = qtdpacote + " - Pacotes " + qtdfigurinhas + " - Fifurinhas" ;
