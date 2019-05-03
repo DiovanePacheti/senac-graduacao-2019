@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DiovanePacheti/projetosenacgraduacao/issues"
   },
-  "homepage": "https://github.com/DiovanePacheti/projetosenacgraduacao#readme"
+  "homepage": "https://github.com/DiovanePacheti/projetosenacgraduacao#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
 }
