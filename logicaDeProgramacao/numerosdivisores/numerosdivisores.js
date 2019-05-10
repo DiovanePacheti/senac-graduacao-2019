@@ -14,7 +14,7 @@ function calcular(){
          }
     }
    
-        outResposta.textContent = cont ;
+        outResposta.textContent = "Divisores do " + numero + " : " + cont ;
 }
 var btExibir = document.getElementById("btExibir");
 btExibir.addEventListener("click", calcular);

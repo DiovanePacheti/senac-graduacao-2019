@@ -12,7 +12,7 @@ function calcular(){
        }
     }
    
-        outResposta.textContent = cont ;
+        outResposta.textContent = "Entre 1 e " + numero + " : " + cont ;
 }
 var btExibir = document.getElementById("btExibir");
 btExibir.addEventListener("click", calcular);
