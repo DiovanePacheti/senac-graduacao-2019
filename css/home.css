@@ -8,12 +8,9 @@ html, body {
   background-color:;
 }
 .bloco{
-  min-height: 100%; 
-  padding-top: 94px; 
+  min-height: 100%;
 }
-/*LOGO*/
-.logo_text{font-size: 0; margin: 0;}
-.logo_img{width: 100px; margin-top: 15px;}
+
 /*HOME*/
 .home { background-image : url('../img/prediosenac.jpg'); background-repeat: no-repeat; background-size:cover;}
 .banner h2 {
@@ -26,27 +23,6 @@ nav{
   height: 94px;
   line-height: 94px;
   }
-
-nav.nav-extended .nav-wrapper{
-  min-height: 94px;
-  height: auto;
-} 
-.navbar-fixed{
-  position: absolute;
-  height: 94px;
-  z-index: 997;
-} 
-nav i,
-nav [class^="mdi-"], nav [class*="mdi-"],
-nav i.material-icons {
-  display: block;
-  font-size: 24px;
-  height: 94px;
-  line-height: 94px;
-}
-/*MENU*/
-.navbar{ background-color: transparent;}
-.navbar ul a:hover {background-color: transparent; color: #009688;}
 
 h1 {
   color: #e0f2f1;
