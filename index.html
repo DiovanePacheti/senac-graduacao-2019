@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restaurante Avenida</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" href="img/icon.png" >
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-</head>
-<body>
-    <header>
-      
-      
-      <div class=" navbar-fixed">
-       <nav>
-         <ul class=" right light ">                                                          <li><a  href="logicaDeProgramacao/logica.html" >Logica de Programação</a></li>                                        <li><a href="fundamentosdainformatica/fundament
-os.html">Fundamentos da Informatica</a></li>                           <li><a href="rededecomputador/rede.html">Redes de Computador</a></li>                                              </ul>
-       </nav>
-      </div><!-- fim da div class navbar-fixed -->
 
-    </header>
-    <section class ="home bloco">
-       <div class=" row container banner ">
-          <div class =" col s12 center">
-	    <h2>Projeto Senac Graduação Analise e Desenvolvimento de Sistema </h2>
-	  </div><!-- fim da class col s12 -->
-       </div><!-- fim da class row container banner -->
-    
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DioEnd</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="img/icone.png">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+<body>
+  <header>
+    <!-- MENU MOBILE -->
+    <ul class="side-nav" id="menu-mobile">
+        <li><a href="logicaDeProgramacao/logica.html">Logica de Programação</a></li>
+        <li><a href="fundamentosdainformatica/fundamentos.html">Fundamentos da Informatica</a></li>
+        <li><a href="rededecomputador/rede.html">Redes de Computador</a></li>
+    </ul>
+
+    <div class=" navbar-fixed">
+      <nav class="navbar z-depth-0">
+        <div class="nav-wrapper container">
+          <h1 class="logo_text">DioEnd</h1>
+          <a href=""><img src="img/logo-topo.png" alt="" class="logo_img"></a>
+        
+          <ul class=" right light hide-on-med-and-down">
+            <li><a href="logicaDeProgramacao/logica.html">Logica de Programação</a></li>
+            <li><a href="fundamentosdainformatica/fundamentos.html">Fundamentos da Informatica</a></li>
+            <li><a href="rededecomputador/rede.html">Redes de Computador</a></li>
+          </ul>
+          
+          <a href="" data-activates="menu-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+        </div><!-- fim da div class nav-wrapper container-->
+      </nav>
+    </div><!-- fim da div class navbar-fixed -->
+  </header>
+  <section class="home bloco">
+    <div class=" row container banner ">
+      <div class=" col s12 center">
+        <h2>Projeto Senac Graduação Analise e Desenvolvimento de Sistema </h2>
+      </div><!-- fim da class col s12 -->
+    </div><!-- fim da class row container banner -->
+
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- funcao que chama o menu mobile javascript-->
+  <script src="">
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+    });
+  </script>
 </body>
-</html>
-    
+
+</html> 
