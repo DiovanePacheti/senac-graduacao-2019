@@ -1,14 +1,18 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
- 
-sass.compiler = require('node-sass');
- 
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+var watch = require('gulp-watch');
+
+// task para o sass
+gulp.task('sass', function() {
+    return gulp.src('sass/**/*.sass')
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulp.dest('css'));
 });
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+
+// task para watch
+gulp.task('watch', function(){
+	gulp.watch('sass/**/*.sass', ['sass']);
 });
+
+// task default gulp
+gulp.task('default', ['sass', 'watch']);
