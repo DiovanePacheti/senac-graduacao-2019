@@ -15,7 +15,7 @@
   <header>
     
     <!-- MENU MOBILE -->
-    <ul class="sidenav" id="menu-mobile">
+    <ul class="sidenav text-blue-grey lighten-4" id="menu-mobile">
         <li><a href="logicaDeProgramacao/logica.html">Logica de Programação</a></li>
         <li><a href="fundamentosdainformatica/fundamentos.html">Fundamentos da Informatica</a></li>
         <li><a href="rededecomputador/rede.html">Redes de Computador</a></li>
@@ -52,7 +52,18 @@
     </div><!-- fim da class row container banner -->
 
   </section><!-- Fim da HOME -->
-
+  
+  <!-- div classe sobre -->
+  <div class="sobre bloco">
+     <div class="row container">
+        <div class="col s12">
+		<h2 class="light">Quem sou eu ?</h2>	
+	</div><!-- fim da div col s12 -->
+	<div class="col s12 l6">
+		<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+	</div><!-- fim da div classe col 12 l6 -->	
+     </div><!-- fim da classe row -->	     
+  </div><!-- fim da div sobre -->
   <!-- Scripts e links javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -62,6 +73,15 @@
       $('.sidenav').sidenav();
     });
   </script>
+  <script>
+    $(window).on("scroll", function(){
+	    if($(window).scrollTop() > 14){
+               $(".navbar").addClass("nav-color");	
+	    }else{
+	       $(".navbar").removeClass("nav-color");
+	    }	    
+    });	  
+  </script>		
 </body>
 
 </html> 
