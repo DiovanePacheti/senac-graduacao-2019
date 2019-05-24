@@ -74,5 +74,12 @@ h2{ font-size: 1rem;}
 }
 
 @media only screen and(min-width: 993px){
-.banner {padding-top: 4.5rem;}
+.banner {padding-top: 4.5rem; }
 }
+
+/* pagina logica de programação */
+.logica { background-color: #ee6e73;}
+section>h2 { color: pink;} 
+
+
+
