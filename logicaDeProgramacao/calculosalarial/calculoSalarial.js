@@ -6,9 +6,9 @@ function calcular(){
 
         var inSalario = document.getElementById("inSalario");
         var salario = Number(inSalario.value);
-                                                                            //   var media = (notaUm + notaDois)/ 2;
+        //   var media = (notaUm + notaDois)/ 2;
 
-    //    var statusCurricular;
+        //    var statusCurricular;
 	
 	var novoSalario = salario * 1.10;
 
@@ -17,7 +17,7 @@ function calcular(){
 
 
         var outSalario = document.getElementById("outSalario");
-        outSalario.textContent = "Reajuste salarial :" + salario;
+        outSalario.textContent = "Reajuste salarial :" + novoSalario.toFixed() + " R$";
 
 
 
@@ -41,6 +41,7 @@ function calcular(){
 
 } 
 //vamos obter o ducumento que tiver o ID btMostrar 
+
 var btMostrar = document.getElementById("btMostrar");
 
 btMostrar.addEventListener("click", calcular);
