@@ -55,6 +55,7 @@ h1 {
 
 p {
   font-family: verdana;
+  color:red;
   font-size: 20px;
 }
 
@@ -82,4 +83,5 @@ h2{ font-size: 1rem;}
 section>h2 { color: pink;} 
 
 
+.texto{color:red;}
 
