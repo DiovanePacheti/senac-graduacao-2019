@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DioEnd</title>
+  <!-- link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="img/icone.png">
@@ -56,11 +57,11 @@
   <!-- div classe sobre -->
   <div class="sobre bloco">
      <div class="row container textoresumo">
-        <div class="container col l8">
-	   <img src="img/minhafoto.png" class="  z-depth-5 circle responsive-img ajusteminhafoto" alt="uma foto minha">
+        <div class="container col 12 center ">
+	   <img src="img/minhafoto.png" width="70% "class=" center z-depth-5 circle responsive-img ajusteminhafoto" alt="uma foto minha">
 	</div>	
         <div class="col s12">
-		<h2 class="light">Quem sou eu ?</h2>	
+		<h2 class="light container center ">Quem sou eu ?</h2>	
 	</div><!-- fim da div col s12 -->
 	<div class="col s12 l6">
 		<p>
@@ -90,13 +91,13 @@
      </div><!-- fim da classe row -->	     
   </div><!-- fim da div sobre -->
 
- <section class="contato">
-				<div class="container">
-					<form action="">
-						<div class="cols">
-							<div class="col">
-								<div class="form-group"><!-- div "form-group" Nome: -->
-									<input type="text" pattern="^[A-Za-z0-9_]{1,15}$" maxlength="37" required>
+ <section class="contato bloco purple darken-3">
+    <div class="container">
+	<form action="">
+        	<div class="cols">
+			<div class="col">
+			  <div class="form-group"><!-- div "form-group" Nome: -->
+				<input type="text" class="validate" pattern="^[A-Za-z0-9_]{1,15}$" maxlength="37" required>
 									<label>Nome</label>
 									<span class="bar"></span>
 								</div>
@@ -133,7 +134,7 @@
 						</div>
 					  <!-- ====== div "form-group" button ======= -->
 					  <div class="form-group">
-							<button class="botao medio"><i class="fa fa-arrow-right"></i> Enviar Contato</button>
+							<button class="btn waves-effect waves-light"><i class="material-icons right"></i> Enviar Contato</button>
 						</div>
 					</form>
 				</div>
@@ -142,6 +143,14 @@
   <!-- Scripts e links javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- bootstrap 
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+-->
+
   <!-- funcao que chama o menu mobile javascript-->
   <script>
     $(document).ready(function(){
