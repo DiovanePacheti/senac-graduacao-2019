@@ -57,7 +57,7 @@
   <div class="sobre bloco">
      <div class="row container textoresumo">
         <div class="container col l8">
-	   <img src="img/minhafoto.png" class=" truncate circle responsive-img ajusteminhafoto" alt="uma foto minha">
+	   <img src="img/minhafoto.png" class="  z-depth-5 circle responsive-img ajusteminhafoto" alt="uma foto minha">
 	</div>	
         <div class="col s12">
 		<h2 class="light">Quem sou eu ?</h2>	
@@ -72,29 +72,73 @@
 
 		<p>Além das atualizações com certificação que venho buscando para me qualificar possuo conhecimentos em ferramenta que me auxiliam no meu desenvolvimento nesta área, Composer, framework Bootstrap, Git, gulp, bower, nodejs.</p>  
 
-	Busco uma vaga no mercado de front-end para poder desenvolver minhas habilidades em trabalhos profissionais, possuo foco no meu trabalho e estou constantemente tentando me manter o mais atualizado possível sobre novos conceitos de estruturação e em boas práticas para um melhor resultado em meus projetos 
+			<p>Busco uma vaga no mercado de front-end para poder desenvolver minhas habilidades em trabalhos profissionais, possuo foco no meu trabalho e estou constantemente tentando me manter o mais atualizado possível sobre novos conceitos de estruturação e em boas práticas para um melhor resultado em meus projetos </p>
 
-FORMAÇÃO 
 
-Ensino médio completo – concluído em 2013
-Colégio Alternativo 
-
-<h3>CERTIFICAÇÕES</h3>
-<ul>
-	<li>Certificação Hardware – Garcia Informática  ano: 2011</li>
-	<li>Certificação Web Designer – Senac  ano: 2012</li>
-	<li>Certificação Esmerilhador – End Tec  ano: 2013</li>
-	<li>Certificação Html5 – CursoemVideo.com Código do Certificado: 4110-992-7957 ano: 2017</li>
-	<li>Certificação Algoritmo – CursoemVideo.com Código do Certificado: 4110-973-7957 ano: 2017</li>
-	<li>certificação PHP – CursoemVideo.com Código do Certificado: 4110-2423-7957 ano: 2017</li>
-	<li>Certificação Mysql – CursoemVideo.com Código do Certificado: 4110-1091-7957 ano: 2017</li>
- </ul>
-INFORMÁTICA
-Domínio em HTML5, Conhecimento Linguagem PHP, css3, MySQL, (Adobe) Photoshop, Fireworks, Dreamweaver. 
+<ul class="collection with-header">
+	<li class="collection-header"><h3>CERTIFICAÇÕES</h3></li>
+	<li class="collection-item">Certificação Hardware – Garcia Informática  ano: 2011</li>
+	<li class="collection-item active">Certificação Web Designer – Senac  ano: 2012</li>
+	<li class="collection-item">Certificação Esmerilhador – End Tec  ano: 2013</li>
+	<li class="collection-item active">Certificação Html5 – CursoemVideo.com Código do Certificado: 4110-992-7957 ano: 2017</li>
+	<li class="collection-item">Certificação Algoritmo – CursoemVideo.com Código do Certificado: 4110-973-7957 ano: 2017</li>
+	<li class="collection-item active">certificação PHP – CursoemVideo.com Código do Certificado: 4110-2423-7957 ano: 2017</li>
+	<li class="collection-item">Certificação Mysql – CursoemVideo.com Código do Certificado: 4110-1091-7957 ano: 2017</li>
+ </ul> 
 </p>
 	</div><!-- fim da div classe col 12 l6 -->	
      </div><!-- fim da classe row -->	     
   </div><!-- fim da div sobre -->
+
+ <section class="contato">
+				<div class="container">
+					<form action="">
+						<div class="cols">
+							<div class="col">
+								<div class="form-group"><!-- div "form-group" Nome: -->
+									<input type="text" pattern="^[A-Za-z0-9_]{1,15}$" maxlength="37" required>
+									<label>Nome</label>
+									<span class="bar"></span>
+								</div>
+							</div><!-- fim da div cols -->
+							<div class="col">							
+								<div class="form-group"><!-- div "form-group" Email: -->
+								    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="37" required>
+								    <label>E-mail</label>
+								    <span class="bar"></span>
+							  </div>
+						  	</div><!-- fim da div cols -->
+						  	<div class="col">					  		
+								<div class="form-group"><!-- div "form-group" Email: -->
+								    <input type="number" required>
+								    <label>Telefone:</label>
+								    <span class="bar"></span>
+							    </div>
+						    </div><!-- fim da div cols -->
+						    <div class="col">					  	
+								<div class="form-group"><!-- div "form-group" Select: -->
+									<select name="" id="">
+										<option value="">selecione um opção</option>
+										<option value="">Orçamento</option>
+										<option value="">Sugestão</option>
+									</select>
+									<span class="bar"></span>
+								</div>
+							</div><!-- fim da div cols -->
+						</div>
+						<!-- div "form-group" : -->	
+						<div class="form-group">
+							<textarea class="texto-contato" ></textarea>
+							<label>Deixe sua mensagem</label>
+						</div>
+					  <!-- ====== div "form-group" button ======= -->
+					  <div class="form-group">
+							<button class="botao medio"><i class="fa fa-arrow-right"></i> Enviar Contato</button>
+						</div>
+					</form>
+				</div>
+			</section>
+
   <!-- Scripts e links javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -112,7 +156,27 @@ Domínio em HTML5, Conhecimento Linguagem PHP, css3, MySQL, (Adobe) Photoshop, F
 	       $(".navbar").removeClass("nav-color");
 	    }	    
     });	  
-  </script>		
+  </script>
+
+  
+		<script>
+		  $(document).ready(function() {
+		    $('input').blur(function() {
+		      if ($(this).val())
+		        $(this).addClass('used');
+		      else
+		        $(this).removeClass('used');
+
+		    });
+		    $('textarea').blur(function() {
+		      if ($(this).val())
+		        $(this).addClass('used');
+		      else
+		        $(this).removeClass('used');
+
+		    });
+		  });
+		</script>
 </body>
 
 </html> 
