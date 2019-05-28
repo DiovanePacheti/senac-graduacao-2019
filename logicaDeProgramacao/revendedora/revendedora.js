@@ -31,7 +31,3 @@ var btCalcular = document.getElementById("btCalcular");
 
 //quando clicarmos no botao vamos chamar a funçao
 btCalcular.addEventListener("click", calcular);
-~
-~
-~
-
