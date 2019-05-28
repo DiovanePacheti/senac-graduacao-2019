@@ -41,10 +41,9 @@
     </div>
     </section>
 
-    <section>
-	    <h2 class="center">Código em Java</h2>
-	    <pre center>
-package revendedora.com;
+    <section class="blue-grey">
+	    <pre>
+	     package revendedora.com;
 import java.util.Scanner;
 public class Revendedora {
 
@@ -58,27 +57,7 @@ public class Revendedora {
    double avista = 0;
    double parcela = 0;
    
-   System.out.print("Digite o modelo do veiculo : ");
-   modelo = scan.next();
-   
-   System.out.print("Digite o valor do veiculo : ");
-   valor = scan.nextDouble();
-   
-   
-   desconto = valor * 0.20;
-   avista = valor - desconto;
-   parcela = valor / 12;   
-   
-   System.out.print("Modelo : " + modelo + "\nValor: " 
-                    + valor + "\nÀ vista: " 
-		    + avista + "\nTotal do desconto de 20% : " 
-		    + desconto + "\nParcela 12 x : " 
-		    + parcela);
-   
-   
-  }//fim do method
-}//fim da class 
-
+    
 	
 	    </pre>
     </section>	    

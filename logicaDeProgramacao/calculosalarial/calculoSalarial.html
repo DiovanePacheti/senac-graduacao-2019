@@ -12,6 +12,8 @@
 
 </head>
 <body>
+	<div class="container bloco">	
+         <div class="row container bloco">
     <h1>Programa calculo salarial </h1>
     <p>
         qual seu nome ?
@@ -28,6 +30,54 @@
     </p>
     <h3 id="outNome"></h3>
     <h3 id="outSalario"></h3>
+    </div><!-- fim da div row container bloco -->
+    
+    	
+    <section class="bloco" >
+      <div id="calculoSalarialJava" class=" clo 12  container row">
+	      <h1>Código em Java</h1>
+	 <pre class="bloco container col 12">
+          
+package calculosalarial;
+import java.util.Scanner;
+/**
+ *
+ * @author redes
+ */
+public class CalculoSalarial {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+   
+        Scanner scan = new Scanner(System.in);
+        
+        String nome = " ";
+        double salario = 0;
+        double novoSalario = 0;
+        
+        System.out.print("Digite seu nome : ");
+        nome = scan.next();
+        
+        System.out.print("Digite o salario : ");
+        salario = scan.nextDouble();
+         
+        novoSalario = salario * 1.10;
+        
+        System.out.println("Nome : " + nome +  "\nSalario : " + salario + "\nNovo Salario : " + novoSalario);
+        
+    }//fim do method
+    
+}//fim da class 
+
+
+
+	</pre>
+      </div>
+	</div>
+    </section>
 
     <script src="calculoSalarial.js"></script>
 
