@@ -20,7 +20,8 @@ function calcular(){
      var outRespostaAvista = document.getElementById("outRespostaAvista");
         outRespostaAvista.textContent = "À vista : " + avista;
 
-     var outRespostaDesconto = document.getElementById("outRespostaDesconto");                                                                        outRespostaDesconto.textContent = "Total do desconto de 20% : " + (valor - avista);
+     var outRespostaDesconto = document.getElementById("outRespostaDesconto"); 
+        outRespostaDesconto.textContent = "Total do desconto de 20% : " + (valor - avista);
 
      var outRespostaParcela = document.getElementById("outRespostaParcela");      
      outRespostaParcela.textContent = "Parcela : 12 x " + parcela;
