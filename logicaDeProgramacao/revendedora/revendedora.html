@@ -42,8 +42,8 @@
     </section>
     <section>
 	    <h2 class="center">Código em JavaScript</h2>
-	    <pre>
-		function calcular(){
+	    <pre class="fundo">
+function calcular(){
 
     var inModelo = document.getElementById("inModelo");
     var modelo = inModelo.value;
@@ -66,7 +66,8 @@
         outRespostaAvista.textContent = "À vista : " + avista;
 
      var outRespostaDesconto = document.getElementById("outRespostaDesconto");
-        outRespostaDesconto.textContent = "Totsssssdl do desconto de 20% : " + (valor - avista);
+     outRespostaDesconto.textContent = "Totsssssdl do desconto de 20% : " 
+     + (valor - avista);
 
      var outRespostaParcela = document.getElementById("outRespostaParcela");
      outRespostaParcela.textContent = "Parcela : 12 x " + parcela;
@@ -81,7 +82,7 @@ btCalcular.addEventListener("click", calcular);
     </section>	    
     <section>
 	    <h2 class="center">Código em Java</h2>
-	    <pre center>
+	    <pre>
 package revendedora.com;
 import java.util.Scanner;
 public class Revendedora {

@@ -8,4 +8,6 @@ h1{ color: #006064 ;}
 
 h2, h3, p { color: #37474f;}
 
+pre.fundo{ background-color:#009688; color: #000; font-size :60%;}
 pre{ color:#fff; background-color:#212121; width:100%; font-size:70%; padding:8px;}
+
