@@ -10,10 +10,10 @@ function calculandoProdutoMercado(){
     var valorTotalComDescontoNaTerceiraUnidade = (preco * 2) + (preco - (preco * 0.50) );
 
     var outSaidaResultadoProduto = document.getElementById("outSaidaResultadoProduto");
-    outSaidaResultadoProduto.textContent = "Promoçâo " + produto;
+    outSaidaResultadoProduto.textContent = "Promoção " + produto;
 
     var outSaidaResultadoPreco = document.getElementById("outSaidaResultadoPreco");
-    outSaidaResultadoPreco.textContent = "Leve 3 por apens " + valorTotalComDescontoNaTerceiraUnidade;
+    outSaidaResultadoPreco.textContent = "Leve 3 por apens " + valorTotalComDescontoNaTerceiraUnidade.toFixed(2);
 
 
 }//fim da function calculando produto mercado
