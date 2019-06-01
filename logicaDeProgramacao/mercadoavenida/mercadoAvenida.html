@@ -5,23 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mercado Avenida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Mercado Avenida</h1>
-    <p>
-        Produto : <input type="text" id="inProduto">
-    </p>
+    <section class="bloco">
+	    <div class=" container row">
+   		 <h1>Mercado Avenida</h1>
+   		 <div class=" col s12 center">
+   			 <p>
+      			  Produto : <input type="text" id="inProduto">
+  		         </p>
     <p>
         Preço R$ : <input type="text" name="" id="inPreco">
     </p>
     <p>
-        <input type="button" value="Calcular" id="btCalcular"> 
+        <input class="btn waves-effect waves-light"  type="button" value="Calcular" id="btCalcular"> 
     </p>
 
     <h3 id="outSaidaResultadoProduto"></h3>
     <h3 id="outSaidaResultadoPreco"></h3>
-
+    </div
     <script src="mercadoAvenida.js"></script>
+    <!-- Scripts e links javaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 </html>
 
