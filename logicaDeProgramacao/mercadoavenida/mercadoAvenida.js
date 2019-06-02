@@ -13,7 +13,7 @@ function calculandoProdutoMercado(){
     outSaidaResultadoProduto.textContent = "Promoção " + produto;
 
     var outSaidaResultadoPreco = document.getElementById("outSaidaResultadoPreco");
-    outSaidaResultadoPreco.textContent = "Leve 3 por apens " + valorTotalComDescontoNaTerceiraUnidade.toFixed(2);
+    outSaidaResultadoPreco.textContent = "Leve 3 por apens " + valorTotalComDescontoNaTerceiraUnidade.toFixed(2) + " R$";
 
 
 }//fim da function calculando produto mercado
