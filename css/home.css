@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-
-
 /* ----- HEIGHT 100% -------- */
-html, body {height: 100%; font-family: 'Roboto', sans-serif;}
-ul, li{ font-size: 3em;}
+html, body {height: 100%;}
+
 .bloco{min-height: 100%; padding-top: 94px; }
 
 /* --------- LOGO ----------- */
@@ -33,14 +29,14 @@ nav.nav-extended .nav-wrapper{
   height: auto;
 } 
 .navbar-fixed{
-  positiot: absolute;
+  position: absolute;
   height: 94px;
   z-index: 997;
 } 
 nav i,
 nav [class^="mdi-"], nav [class*="mdi-"],
 nav i.material-icons {
-  di1splay: block;
+  display: block;
   font-size: 24px;
   height: 94px;
   line-height: 94px;
@@ -56,11 +52,11 @@ h1 {
   font-size: ;
   padding:;
 }
-
+.sessaologica{ background-color:#4fc3f7;}
 p {
+  font-family: verdana;
   color:#37474f;
-  font-size:2em;
-  font-weight: 100;
+  font-size: 20px;
 }
 
 /*-------- SOBRE --------- */
@@ -88,7 +84,6 @@ h2{ font-size: 1rem;}
 /*img .ajusteminhafoto{ width:30px; border: 1px red solid;}*/
 
 /*
-
 .contato{margin:50px 0 20px 0; background-color:#6a1b9a;}
 .contato form{position:relative;min-height:1px;padding-left:15px;padding-right:15px}
 .contato form:before,.contato form:after{content:" ";display:table}.contato form:after{clear:both}
