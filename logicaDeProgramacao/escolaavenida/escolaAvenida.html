@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restaurante Avenida</title>
+    <title>Escola Avenida</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
@@ -14,19 +14,14 @@
 	   
    <div class="container banner row">
     <h1>Escola Avenida</h1>
+    <div class=" col s12 center">
     <h2>Boletim escolar<h2>
-    <p>
-        1° Nota : <input type="text" name"" id="inNotaUm">
-    </p>
-    <p>
-        2° Nota : <input type="text" name="" id="inNotaDois">
-    </p>
-    <p>
-        <input class="btn waves-effect " type="button" value="Calcular Media" id="btCalcular">
-    </p>                                                               
+    <p>1° Nota : <input type="text" name"" id="inNotaUm"></p>
+    <p>2° Nota : <input type="text" name="" id="inNotaDois"></p>
+    <p><input class="btn waves-effect " type="button" value="Calcular Media" id="btCalcular"></p>                                                               
     <h3 id="outMedia"></h3> 
     <h3 id="outStatusCurricular"></h3>
-
+     </div>
     </div>
    </section>
     
@@ -34,7 +29,7 @@
             <h2 class="center">Código em JavaScript</h2>
             <pre class="fundo">
 
-	    unction calcularMedia(){
+function calcularMedia(){
 
         var inNotaUm = document.getElementById("inNotaUm");
         var notaUm = Number(inNotaUm.value);
@@ -64,7 +59,7 @@ var btMostrar = document.getElementById("btCalcular");
 //quando clicarmos no botao vamos chamar a funçao
 btCalcular.addEventListener("click", calcularMedia);
      </pre>
-     <section>
+     </section>
      <section>
             <h2 class="center">Código em Java</h2>
             <pre>

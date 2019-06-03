@@ -1,6 +1,10 @@
-/* ----- HEIGHT 100% -------- */
-html, body {height: 100%;}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
+
+/* ----- HEIGHT 100% -------- */
+html, body {height: 100%; font-family: 'Roboto', sans-serif;}
+ul, li{ font-size: 3em;}
 .bloco{min-height: 100%; padding-top: 94px; }
 
 /* --------- LOGO ----------- */
@@ -29,14 +33,14 @@ nav.nav-extended .nav-wrapper{
   height: auto;
 } 
 .navbar-fixed{
-  position: absolute;
+  positiot: absolute;
   height: 94px;
   z-index: 997;
 } 
 nav i,
 nav [class^="mdi-"], nav [class*="mdi-"],
 nav i.material-icons {
-  display: block;
+  di1splay: block;
   font-size: 24px;
   height: 94px;
   line-height: 94px;
@@ -54,9 +58,9 @@ h1 {
 }
 
 p {
-  font-family: verdana;
   color:#37474f;
-  font-size: 20px;
+  font-size:2em;
+  font-weight: 100;
 }
 
 /*-------- SOBRE --------- */
