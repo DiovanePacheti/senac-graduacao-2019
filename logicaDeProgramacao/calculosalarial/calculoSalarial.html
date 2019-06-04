@@ -12,9 +12,10 @@
 
 </head>
 <body>
-	<div class="container bloco">	
-         <div class="row container bloco">
+	<section class="bloco">
+		<div class="container banner row">
     <h1>Programa calculo salarial </h1>
+    <div class="col s12 center">
     <p class="pergunta">
         qual seu nome ?
         <input type="text" name="" id="inNome">
@@ -30,14 +31,14 @@
     </p>
     <h3 id="outNome"></h3>
     <h3 id="outSalario"></h3>
+    </div>
     </div><!-- fim da div row container bloco -->
     
     	
-    <section class="bloco" >
-      <div id="calculoSalarialJava" class=" clo 12  container row">
-	      <h1>Código em Java</h1>
-	 <pre class="bloco container col 12">
-          
+     </section>
+    <section class="linha">
+	    <h2 class="center">Código em JavaScript</h2>
+	    <pre class="fundo">
 package calculosalarial;
 import java.util.Scanner;
 /**
@@ -66,7 +67,9 @@ public class CalculoSalarial {
          
         novoSalario = salario * 1.10;
         
-        System.out.println("Nome : " + nome +  "\nSalario : " + salario + "\nNovo Salario : " + novoSalario);
+        System.out.println("Nome : " + nome +  
+	"\nSalario : " + salario + "\nNovo Salario : 
+	" + novoSalario);
         
     }//fim do method
     
@@ -75,8 +78,6 @@ public class CalculoSalarial {
 
 
 	</pre>
-      </div>
-	</div>
     </section>
 
     <script src="calculoSalarial.js"></script>

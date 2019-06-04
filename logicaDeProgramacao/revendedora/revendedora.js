@@ -21,10 +21,10 @@ function calcular(){
         outRespostaAvista.textContent = "À vista : " + avista;
 
      var outRespostaDesconto = document.getElementById("outRespostaDesconto"); 
-        outRespostaDesconto.textContent = "Total do desconto de 20% : " + (valor - avista);
+        outRespostaDesconto.textContent = "Total do desconto de 20% : " + (valor - avista).toFixed(2);
 
      var outRespostaParcela = document.getElementById("outRespostaParcela");      
-     outRespostaParcela.textContent = "Parcela : 12 x " + parcela;
+     outRespostaParcela.textContent = "Parcela : 12 x " + parcela.toFixed(2);
 
 }//fim da function calcular
 //vamos obter o ducumento que tiver o ID btMostrar
