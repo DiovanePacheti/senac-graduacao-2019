@@ -8,7 +8,7 @@ html, body {height: 100%;}
 .logo_img{width: 80px; margin-top: 8px;}
 
 /* --------- MENU MOBILE ----- */
-.sidenav{ background-color:#424242;}
+.sidenav{ background-color: transparent ;}
 .sidenav li>a{color: #4db6ac; font-height:100;}
 
 /* ---------- HOME ---------- */

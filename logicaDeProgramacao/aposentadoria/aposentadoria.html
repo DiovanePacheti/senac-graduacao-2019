@@ -1,35 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa Aposentadoria</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../cssLogica/logica.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Programa Aposentadoria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../cssLogica/logica.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-	<div class="container ">
-           <h1>Programa Aposentadoria</h1>
-	</div>
-    </header>
-    <section>
-	<div class="card-img container ">
-        <img class="imagresponsiva"  src="../../img/imgAposentadoria.png" alt="foto do exercicio de aposentadoria no quadro">
-	</div> 
-	<div class="row container bloco ">
+
+  <section class=" bloco">
+
+    <div class="container banner row">
+      <h1>Programa Aposentadoria</h1>
+      <div class=" col s12 center">
+
+
+        <div class="card-img container ">
+          <img class="imagresponsiva" src="../../img/imgAposentadoria.png"
+            alt="foto do exercicio de aposentadoria no quadro">
+        </div>
+
         <p class="texto">Tempo de contribuição : <input type="text" id="inContribuicao"></p>
         <p>Idade : <input type="text" id="inIdade"></p>
         <p><input class="btn waves-effect waves-light" type="button" value="verificar" id="btVerificar"></p>
-	<h3 id="outVerificar"></h3>
-      </div>	
-    </section>
-    <script src="aposentadoria.js"></script>
-    
+      </div>
+      <h3 id="outVerificar"></h3>
+
+    </div>
+  </section>
+
+  <section class="linha">
+    <h2 class="center">Código em JavaScript</h2>
+    <pre class="fundo">
+        function verificarAposentadoria(){
+
+          var inContribuicao = document.getElementById("inContribuicao");
+          var contribuicao = Number(inContribuicao.value);
+      
+          var inIdade = document.getElementById("inIdade");
+          var idade = Number(inIdade.value);
+      
+          var faltaIdade;
+          var faltaContribuicao;
+          var saida;
+      
+          if(idade >= 60 && contribuicao >= 30){
+      
+              saida = "Pode se aposentar ! ";
+          }else{
+              faltaIdade = 60 - idade;
+        faltaContribuicao = 30 - contribuicao;
+      
+        if(faltaIdade > faltaContribuicao){
+          saida = "Faltam " + faltaIdade + " anos pra aposentadoria por idade ";
+        }else{
+          saida = "Faltam " + faltaContribuicao + " anos de tempo de 
+          contribuição para aposentadoria";
+        }
+      
+          }
+      
+          var outVerificar = document.getElementById("outVerificar");
+          outVerificar.textContent = saida;
+      
+      }//fim da function
+      var btVerificar = document.getElementById("btVerificar");
+      btVerificar.addEventListener("click", verificarAposentadoria);
+      
+        </pre>
+  </section>
+  <section>
+    <h2 class="center">Código em Java</h2>
+    <pre>
+
+
+        </pre>
+  </section>
+  <script src="aposentadoria.js"></script>
+
   <!-- Scripts e links javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
