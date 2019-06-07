@@ -1,18 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa Jogo de Carta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h3>Jogo de Carta</h3>
-    <img src="../../img/imgJogoCarta.png" alt="foto do quadro exercicio jogo de carta">
-    <p>Hora inicial : <input type="text" id="inHoraInicial"></p>
-    <p>Hora final : <input type="text" id="inHoraFinal"></p>
-    <p><input type="button" value="Calcular Duração" id="btCalcularDuracao"></p>
-    <h3 id="outDuracao"></h3>
+    <section class=" bloco">
+
+        <div class="container banner row">
+		<h1>Programa Jogo de Carta</h1>
+                <h3>Jogo de Carta</h3>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgJogoCarta.png" alt="foto do quadro exercicio jogo de carta">
+                </div>
+                <p class="pergunta">Hora inicial : <input type="text" id="inHoraInicial"></p>
+                <p class="pergunta">Hora final : <input type="text" id="inHoraFinal"></p>
+                <p><input class=" btn " type="button" value="Calcular Duração" id="btCalcularDuracao"></p>
+            </div>
+            
+            <h3 id="outDuracao"></h3>
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+           function calcularDuracao(){
+
+    var inHoraInicial = document.getElementById("inHoraInicial");
+    var inHoraInicial = Number(inHoraInicial.value);
+
+    var inHoraFinal = document.getElementById("inHoraFinal");
+    var inHoraFinal = Number(inHoraFinal.value);
+
+    var duracao;
+
+    if(inHoraInicial < inHoraFinal){
+       duracao = inHoraFinal - inHoraInicial;
+    }else{
+       duracao = (24+inHoraFinal) - inHoraInicial;
+    }
+
+    var outDuracao = document.getElementById("outDuracao");
+    outDuracao.textContent = "Duração do jogo  " + duracao + " hora(s)";
+
+}//fim da function
+var btCalcularDuracao = document.getElementById("btCalcularDuracao");
+btCalcularDuracao.addEventListener("click", calcularDuracao);
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
     <script src="jogocarta.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>

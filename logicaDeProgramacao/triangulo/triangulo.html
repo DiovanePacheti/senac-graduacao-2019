@@ -1,21 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa verifica triangulo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h3>Programa Verifica Triângulo</h3>
-    <img src="../../img/imgTriangulo.png" alt="foto do exercicio triangulo no quadro">
-    <p>Lado A : <input type="text" id="inLadoA"></p>
-    <p>Lado B : <input type="text" id="inLadoB"></p>
-    <p>Lado C : <input type="text" id="inLadoC"></p>
+    <section class=" bloco">
 
-    <p><input type="button" value="Verificar" id="btVerificar"></p>
+        <div class="container banner row">
+            <h1>Programa Verifica Triângulo</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgTriangulo.png" alt="foto do exercicio triangulo no quadro">
+                </div>
+                <p class="pergunta">Lado A : <input type="text" id="inLadoA"></p>
+                <p class="pergunta">Lado B : <input type="text" id="inLadoB"></p>
+		<p class="pergunta">Lado C : <input type="text" id="inLadoC"></p>
+                <p><input class=" btn " type="button" value="Verificar" id="btVerificar"></p>
+            </div>
+            <h3 id="outTriangulo">subtitulo</h3>
+            
 
-    <h3 id="outTriangulo"></h3>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+  	   function verificaTriangulo(){
+
+    var inLadoA = document.getElementById("inLadoA");
+    var ladoA = Number(inLadoA.value);
+
+    var inLadoB = document.getElementById("inLadoB");
+    var ladoB = Number(inLadoB.value);
+
+    var inLadoC = document.getElementById("inLadoC");
+    var ladoC = Number(inLadoC.value);
+
+    var resp = " ";
+    var ladoMaior;
+    var valorLado =0;
+    var somaLados;
+    var ladosIguais;
+    var triangulo;
+
+    if((ladoA > (ladoB + ladoC)) || (ladoB > (ladoA + ladoC)) || 
+    (ladoC > (ladoA + ladoB)) ){
+        
+           if(ladoA > (ladoB + ladoC)){
+              ladoMaior = " Lado A = ";
+              valorLado = ladoA;
+	      somaLados = " Lado C = " + ladoC + " + Lado B = " 
+	      + ladoB + " é = " + (ladoC+ladoB); 
+           }else if(ladoB > (ladoA + ladoC)){
+              ladoMaior = " Lado B = ";
+	      valorLado = ladoB;
+              somaLados = " Lado A = " + ladoA + " + Lado C = " 
+	      + ladoC + " é = " + (ladoA + ladoC);
+           }else if (ladoC > (ladoA + ladoB)){
+              ladoMaior = " Lado C = ";
+              valorLado = ladoC;
+	      somaLados = " Lado A = " + ladoA + " + Lado B = " 
+	      + ladoB + " é = " + (ladoA+ladoB);
+           }
+           resp = "Os lados não podem formar um triângulo porque a soma do " 
+	   + somaLados + " e menor que o valor do " + ladoMaior + valorLado;
+	
+    }else if((ladoA == ladoB) || ( ladoA == ladoC) || (ladoB == ladoC)){
+    //estrutura condicional que verifica se dois lados são iguais
+	
+        triangulo = " Isósceles";
+	    
+	if(ladoA == ladoB && ladoB == ladoC){
+	//verifica se alem de dois lados iguais existe mais um 
+	    triangulo = " Equilátero";
+            ladosIguais = " lado A = " + ladoA + " lado B = " 
+	    + ladoB + " lado C = " +  ladoC;
+        }else  if(ladoA == ladoB){
+            ladosIguais = " lado A = " + ladoA + " e lado B = " + ladoB ;
+	}else if(ladoA == ladoC){
+	    ladosIguais = " lado A = " + ladoA + " e lado C = " + ladoC ;
+	}else if(ladoB == ladoC){
+	    ladosIguais = " lado B = " + ladoB + " e lado C = " + ladoC ;
+	}
+
+        resp = " Os lados" + ladosIguais 
+	+ " são iguais formando um triângulo" + triangulo;
+
+    }else if(ladoA != ladoB && ladoA != ladoC && ladoB != ladoC){  
+            triangulo = "Escaleno";     
+	    resp = " O lado A = " + ladoA + "  lado B = " + ladoB + " lado C = " 
+	    + ladoC + " são lados diferentes formando um triângulo " + triangulo;
+    }
+    var outTriangulo = document.getElementById("outTriangulo");
+    outTriangulo.textContent = resp ;
+    
+
+}// fim da function
+var btVerificar = document.getElementById("btVerificar");
+btVerificar.addEventListener("click", verificaTriangulo);
+	</pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
     <script src="triangulo.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
