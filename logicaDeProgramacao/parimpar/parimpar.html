@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Programa par ou impar</h1>
+    <section class=" bloco">
 
-    <img src="numeros.png" alt="Numeros">
+        <div class="container banner row">
+            <h1>Programa par ou impar</h1>
+            
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                 <p class="pergunta" >Digite um numero: <input type="text" id="inNumero"></p>
+                
+                    <p><input class="btn"  type="buttonn" value="Verificar" id="btverificar"></p>
 
-    <p class="pergunta" >Digite um numero: <input type="text" id="inNumero"></p>
+            </div>
+            <h2  id="outResposta"></h2>
+            
+            
 
-    <p><input class="btn"  type="buttonn" value="Verificar" id="btverificar"></p>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function verificaParImpar(){
+    var inNumero = document.getElementById("inNumero");
+    var outResposta = document.getElementById("outResposta");
 
-    <h3 id="outResposta"></h3>
+    var numero = Number(inNumero.value);
+
+    if(numero%2==0){
+        outResposta.textContent = "O numero " + numero + " é Par ! ";
+    }else{
+        outResposta.textContent = "O numero " + numero + "é Impar !";
+    }
+}
+var btverificar = document.getElementById("btverificar");
+btverificar.addEventListener("click", verificaParImpar);
+        </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
 
     <script src="parimpar.js"></script>
-    <!-- Scripts e links javaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>

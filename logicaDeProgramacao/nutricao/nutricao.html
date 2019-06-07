@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa Centro de Nutrição Avenida</title>
+    <title>Centro de Nutrição Avenida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h3>Programa Centro de Nutrição Avenida</h3>
-    <img src="../../img/imgNutricao.png" alt="foto do quadro exercicio nutrição ">
+    <section class=" bloco">
 
-    <p>Nome : <input type="text" id="inNome"></p>
-    <p>Sexo(M/F) : <input type="text" id="inSexo"></p>
-    <p>Altura : <input type="text" id="inAltura"></p>
-    <p><input type="button" value="Calcular" id="btCalcular"></p>
+        <div class="container banner row">
+            <h1>Programa Centro de Nutrição Avenida</h1>
+            
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgNutricao.png" alt="foto do quadro exercicio nutrição ">
+                </div>
+                <p class="pergunta">Nome : <input type="text" id="inNome"></p>
+                <p class="pergunta">Sexo(M/F) : <input type="text" id="inSexo"></p>
+		<p class="pergunta">Altura : <input type="text" id="inAltura"></p>
+                <p><input class=" btn " type="button"  value="Calcular" id="btCalcular"</p>
+            </div>
+	    <h2 id"outSaida"></h2>
+            
 
-    <h3 id="outSaida"></h3>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
     <script src="nutricao.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>

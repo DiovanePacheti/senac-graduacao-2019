@@ -1,19 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa NetFlix</title>
-</head>
-<body>
-    <h3>Programa NetFlix</h3>
-    <img src="../../img/imgNetflix.png" alt="imagem do exercicio netflix no quadro de aula" >
-    <p>Série : <input type="text" id="inSerie"></p>
-    <p>Duração(min) : <input type="text" id="inDuracao"></p>
-    <p><input type="button" value="Converter" id="btConverter"></p>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
 
-    <h3 id="outTempoDuracao"></h3>
+</head>
+
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Programa NetFlix</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+			<img class="imagresponsiva" src="../../img/imgNetflix.png" alt="imagem do exercicio netflix no quadro de aula">
+                </div>
+                <p class="pergunta">Série : <input type="text" id="inSerie"></p>
+                <p class="pergunta">Duração(min) : <input type="text" id="inDuracao"></p>
+                <p><input class=" btn " type="button" value="Converter" id="btConverter"></p>
+            </div>
+            <h2 id="outTempoDuracao">subtitulo</h2>
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function convertendo() {
+  
+    var inSerie = document.getElementById("inSerie");
+    var serie = inSerie.value;
+
+    var inDuracao = document.getElementById("inDuracao");
+    var duracao = Number(inDuracao.value);
+
+    var horaInteira = duracao / 60;
+
+    var hora = Math.trunc(horaInteira);
+    var minutos = ( duracao % 60);
+
+    var outTempoDuracao = document.getElementById("outTempoDuracao");
+    outTempoDuracao.textContent = serie + " dura : " 
+    + hora + " horas e " + minutos + " minutos";
+	
+
+
+}
+
+var btConverter = document.getElementById("btConverter");
+btConverter.addEventListener("click", convertendo);
+	</pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+         
+
+	</pre>
+    </section>
+
+
     <script src="netflix.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
