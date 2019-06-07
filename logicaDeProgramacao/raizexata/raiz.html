@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa Raiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h3>Programa Raiz</h3>
-    <img src="../../img/imgRaiz.png" alt=" foto do exercicio raiz no quadro ">
-    <p>Número : <input type="text" id="inNumero"></p>
+    <section class=" bloco">
 
-    <p><input type="button" value="Calcular" id="btCalcular"></p>
+        <div class="container banner row">
+            <h1>Programa Raiz</h1>
+            
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgRaiz.png" alt=" foto do exercicio raiz no quadro ">
+                </div>
+                <p class="pergunta">Número : <input type="text" id="inNumero"></p>
+                <p><input class=" btn " type="button" value="Calcular" id="btCalcular"</p>
+            </div>
+            <h3 id="outRaiz"></h3>
+            <h3 id="outResposta"></h3>
 
-    <h3 id="outRaiz"></h3>
-    <h4 id="outResposta"></h4>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+ function calcular() {
+  
+    var inNumero = document.getElementById("inNumero");
+    var numero = Number(inNumero.value);
+
+    var raiz = Math.sqrt(numero);
+
+    var outRaiz = document.getElementById("outRaiz");
+    outRaiz.textContent = "Raiz : " + raiz.toFixed(4);
+
+    if(raiz %1 != 0){
+      resp = " não possui ";
+    }else{
+      resp = " possui ";
+    }
+
+    var outResposta = document.getElementById("outResposta");
+    outResposta.textContent = numero + resp + "rais exata !";
+}
+
+var btCalcular = document.getElementById("btCalcular");
+btCalcular.addEventListener("click", calcular);
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
     <script src="raiz.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
