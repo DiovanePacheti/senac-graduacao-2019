@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa Tabuada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Programa Tabuada </h1>
+    <section class=" bloco">
 
-    <img src="../../img/imgtabuada.png" alt="Numeros">
+        <div class="container banner row">
+            <h1>Programa Tabuada</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva"  src="../../img/imgtabuada.png" alt="Numeros">
+                </div>
+                <p class="pergunta">Digite um numero: <input type="text" id="inNumero"></p>
+        
+                <p><input class=" btn " type="button" value="Exibir"  id="btExibir"></p>
+            </div>
+	    <h3 id="outResposta"></h3>
+            <h3 id="outResposta0"></h3>
+            <h3 id="outResposta1"></h3>
+            <h3 id="outResposta2"></h3>
+            <h3 id="outResposta3"></h3>
+            <h3 id="outResposta4"></h3>
+            <h3 id="outResposta5"></h3>
+            <h3 id="outResposta6"></h3>
+            <h3 id="outResposta7"></h3>
+            <h3 id="outResposta8"></h3>
+            <h3 id="outResposta9"></h3>
+            <h3 id="outResposta10"></h3>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function calcular(){
 
-    <p>Digite um numero: <input type="text" id="inNumero"></p>
+    var inNumero = document.getElementById("inNumero");
+    var outResposta = document.getElementById("outResposta");
 
-    <p><input type="button" value="Exibir"  id="btExibir"></p>
+    var numero = Number(inNumero.value);
+    cont = " ";
+        outResposta.textContent = "Tabuada do "  + numero;
+    for(var i = 0; i <= 10 ; i++){
 
-    <h3 id="outResposta0"></h3>
-    <h3 id="outResposta1"></h3>
-    <h3 id="outResposta2"></h3>
-    <h3 id="outResposta3"></h3>
-    <h3 id="outResposta4"></h3>
-    <h3 id="outResposta5"></h3>
-    <h3 id="outResposta6"></h3>
-    <h3 id="outResposta7"></h3>
-    <h3 id="outResposta8"></h3>
-    <h3 id="outResposta9"></h3>
-    <h3 id="outResposta10"></h3>
+        var outRespostai = document.getElementById("outResposta"+i);
+
+        outRespostai.textContent = numero + (" x ") + i + (" = " ) + (i*numero);
+    }
+}
+var btExibir = document.getElementById("btExibir");
+btExibir.addEventListener("click", calcular);
+    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
 
     <script src="tabuada.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
