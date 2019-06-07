@@ -1,26 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa Àrvore Brilhante</title>
-    <style>
-      pre{ margin:0; text-align: center;}
-    </style>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Programa Àrvore Brilhante</h1>
+   <section class=" bloco">
+	   
+   <div class="container banner row">	   
+      <h1>Programa Àrvore Brilhante</h1>
+      <div class=" col s12 center">
+        <div class="card-img container ">
+            <img class="imagresponsiva" src="../../img/imgarvore.png" alt="imagem do exercicio arvore brilhante">
+        </div>
+      <p class="pergunta">Altura Àrvore : <input type="text" id="inAltArvore"></p>
+      <p><input class=" btn " type="button" value="Exibir" id="btExibir"></div>
+    </p>
+    <h2>Àrvore</h2>
+    <pre class="resposta" id="outResposta"></pre>
 
-    <img src="../../img/imgarvore.png" alt="imagem do exercicio arvore brilhante">
+    </div>
+    </section>
+    <section class="linha">
+	    <h2 class="center">Código em JavaScript</h2>
+	    <pre class="fundo">
+          function arvBrilhante(){
 
-    <p>Altura Àrvore : <input type="text" id="inAltArvore"></p>
+            var inAltArvore = document.getElementById("inAltArvore");
+            var alturaArvore = Number(inAltArvore.value);
+            var vezes = " ";
+            
+            for(var i =0;i < alturaArvore; i++){
+               for(var j = 0 ; j <= i ; j++){	    
+                  vezes +=  "*";
+        
+               }
+                      
+               vezes += "\n";	    
+            }
+        
+        
+            outResposta.textContent = vezes ;
+        }
+        var btExibir = document.getElementById("btExibir");
+        btExibir.addEventListener("click", arvBrilhante);
+        
+	    </pre>
+    </section>	    
+    <section>
+	    <h2 class="center">Código em Java</h2>
+	    <pre>
 
-    <p><input type="button" value="Exibir" id="btExibir"></p>
-
-
-    <pre id="outResposta"></pre>
+	
+	    </pre>
+    </section>	    
+    
 
     <script src="arvorebrilhante.js"></script>
+
+    <!-- Scripts e links javaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
 </html>
+

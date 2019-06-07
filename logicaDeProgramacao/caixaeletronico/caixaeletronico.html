@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>programa Caixa Eletrônico</title>
-</head>
-<body>
-    <h3>Caixa Eletrônico - Saque Notas Disponíveis 100, 50, 10,</h3>   
-    <img src="../../img/imgCaixaEletronico.png" alt="foto do quadro exercicio caixa eletronico ">
-    <p>Saque R$: <input type="text" id="inSaque"></p>
-    <p><input type="button" value="Sacar" id="btSacar"></p>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
 
-    <h3 id="outNotas"></h3>
-    <h3 id="outnotas"></h3>
-    <h3 id="outnotas"></h3>
+</head>
+
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Caixa Eletrônico</h1>
+            <h2> Notas Disponíveis 100, 50, 10,</h2>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgCaixaEletronico.png"
+                        alt="foto do quadro exercicio caixa eletronico ">
+                </div>
+                <p class="pergunta">Saque R$: <input type="text" id="inSaque"></p>
+                <p><input class=" btn " type="button" value="Sacar" id="btSacar"></p>
+            </div>
+            <h2>subtitulo</h2>
+            <h3 id="outNotas"></h3>
+            <h3 id="outnotas"></h3>
+            <h3 id="outnotas"></h3>
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
 
     <script src="caixaeletronico.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
