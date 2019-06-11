@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Programa Numeros</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="../cssLogica/logica.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <section class=" bloco">
+
+       <div class="container banner row">
+           <h1>Program Numeros</h1>
+          
+           <div class=" col s12 center">
+               <div class="card-img container ">
+                   <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
+               </div>
+               <p class="pergunta">Numero: <input type="text" id="inNumero" autofocus></p>
+              
+               <p><input class=" btn col s3" type="button" value="Adiciionar" id="btAdd" ></p>
+               <p><input class=" btn col s3" type="button" value="Pares" id="btPares"></p>
+                <p><input class=" btn col s3" type="button" value="Impares" id="btImpares"></p>
+                <p><input class=" btn col s3" type="button" value="Somar" id="btSomar"></p>
+           </div>
+          
+           <h3 id="outNumAdd"></h3>
+           <h3 id="outSaida"></h3>
+          
+
+       </div>
+   </section>
+   <section class="linha">
+       <h2 class="center">Código em JavaScript</h2>
+       <pre class="fundo">
+           var numeros  = [];    
+           var inNumero = document.getElementById("inNumero");
+          
+           function adicionar() {
+             var outNumAdd = document.getElementById("outNumAdd");
+             var numero = Number(inNumero.value);
+          
+             if (numero == 0 || isNaN(numero)) {
+               alert("valor invalido");
+               inNumero.focus();
+               return;
+             }
+          
+             //Adicionando numeros no fim do vetor
+             numeros.push(numero);   
+          
+             outNumAdd.textContent = "Números " + numeros.join(", ");         
+           
+             inNumero.value = "";
+             inNumero.focus();
+           }
+           var btAdd = document.getElementById("btAdd");
+           btAdd.addEventListener("click", adicionar);
+          
+           // --- inicio da funçao pares ---
+          
+           function pares(){
+            
+             // verificando o tamanho do vetor
+             if(numeros.length == 0){
+               alert("vetor vazio");
+               inNumero.focus();
+               return;
+             }
+             var outSaida = document.getElementById("outSaida");   
+             var res = "";
+          
+             for(var i =0; i < numeros.length; i++){
+               if(numeros[i]%2==0){
+                   res += numeros[i] +", ";
+               }      
+             }//fim do for
+          
+             if(res == ""){
+               outSaida.textContent = "Não há pares na lista";
+             }else{
+               outSaida.textContent = "Pares: " + res;
+             } 
+            
+           }   
+           var btPares = document.getElementById("btPares");
+           btPares.addEventListener("click", pares);
+          
+           // --- função impares ---
+          
+           function impares(){
+            
+          
+             // verificar o tamanho do vetor
+             if(numeros.length == 0){
+               alert("O vetor esta vazio !");
+               inNumero.focus();
+               return;
+             }
+          
+             var outSaida = document.getElementById("outSaida");
+             var res = " ";
+          
+             for(var i=0; i < numeros.length; i++){
+               if(numeros[i]%2 != 0){
+                 res += numeros[i] + ", ";
+               }
+             }
+          
+             if (res == "") {
+               outSaida.textContent = "Não há ímpares na lista";
+             } else {
+               outSaida.textContent = "Ímpares: " + res;
+             }
+           }
+           var btImpares = document.getElementById("btImpares");
+           btImpares.addEventListener("click", impares);
+          
+          
+           function somar(){
+             // verificar o tamanho do vetor
+             if(numeros.length == 0){
+               alert("O vetor esta vazio !");
+               inNumero.focus();
+               return;
+             }
+          
+             var outSaida = document.getElementById("outSaida");
+             var soma = 0;
+          
+             for(var i= 0; i< numeros.length; i++){
+               soma += numeros[i];
+             }
+          
+             outSaida.textContent = "Soma : " +  soma;
+          
+           }
+           var btSomar = document.getElementById("btSomar");
+           btSomar.addEventListener("click", somar);
+          
+        </pre>
+   </section>
+   <section>
+       <h2 class="center">Código em Java</h2>
+       <pre>
+          df'
+
+        </pre>
+   </section>
+
+
+   <script src="num.js"></script>
+
+   <!-- Scripts e links javaScript -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>
+
+
+
