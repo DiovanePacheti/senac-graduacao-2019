@@ -62,6 +62,34 @@ btCalcular.addEventListener("click", calculandoProdutoMercado);
     <section>
             <h2 class="center">Código em Java</h2>
             <pre>
+package mercadoavenida.com;
+import java.util.Scanner;
+public class MercadoAvenida {
+
+  public static void main(String[] args) {
+
+    String produto = " ";
+    double preco = 0;
+    double descontoTerceiraUnidade = 0;
+        
+    Scanner scan = new Scanner(System.in);
+    
+    System.out.print("Digite o Produto : ");
+    produto = scan.next();
+    
+    System.out.print("Digite o preço : ");
+    preco = scan.nextDouble();
+    
+    descontoTerceiraUnidade = (preco * 2) +
+    (preco - (preco * 0.50));
+    
+    System.out.println("Promoção : " + produto);
+    System.out.println("Leve 3 por apenas " +
+    descontoTerceiraUnidade + " R$");
+
+  }//fim do method
+
+}//fim da class
 
 
             </pre>
