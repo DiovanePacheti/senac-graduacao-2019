@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa Par ou Impar</title>
+    <title>Farmácia Avenida</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
@@ -16,19 +16,20 @@
     <section class=" bloco">
 
         <div class="container banner row">
-            <h1>Programa Par Impar</h1>
+            <h1>Informe Primeiro Nome</h1>
             
             <div class=" col s12 center">
                 <div class="card-img container ">
-                    <img class="imagresponsiva" src="../../img/imgParImparRepete.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                    <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
-                <p class="pergunta">Digite um numero : <input type="text" id="inNumero" autofocus ></p>
+                <p class="pergunta">Digite nome : <input type="text" id="inNome"></p>
                 
-                <p><input class=" btn " type="button" value="Verificar" id="btverificar"></p>
+                <p><input class=" btn " type="button" value="Verifica" id="btVerifica"></p>
             </div>
-            
-	    <h3 id="outSaida"></h3>
-            <h3 id="outResposta"></h3>
+        
+        
+            <h3 id="outNome"></h3>
+            <h3 id="outPrimeiroNome"></h3>
 
         </div>
     </section>
@@ -47,7 +48,7 @@
     </section>
 
 
-    <script src="parimparcontaDoWhile.js"></script>
+    <script src="nome.js"></script>
 
     <!-- Scripts e links javaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>

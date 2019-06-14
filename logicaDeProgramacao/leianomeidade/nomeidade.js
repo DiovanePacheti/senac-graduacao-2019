@@ -1,17 +1,26 @@
+ var inIdade = document.getElementById("inIdade");               var inNome = document.getElementById("inNome");
+
+ var cont = 0;
+
 function verificaParImpar(){
-    var inNumero = document.getElementById("inNumero");
+    alert("oi");
+    var outSaida = document.getElementById("outSaida");	
     var outResposta = document.getElementById("outResposta");
 
-    var numero = Number(inNumero.value);
+    var idade = Number(inIdade.value);
+    var nome = inNome.value;
 
-    for(var i = 0; i < numero ; i++){
+    outSaida.textContent += "Nome do jogador = " + nome + ", Idade do jogador = " + idade + " anos " + "\n"	
 
-       if(numero%2==0){
-          outResposta.textContent = "O numero " + numero + " é Par ! ";
-       }else{
-          outResposta.textContent = "O numero " + numero + "é Impar !";
-       }
-    }//fim do for
+    inIdade.value = " ";
+    inNome.value = " ";
+    inNome.focus();
+
+    cont++;
+
+    var soma += idade;	
+
+    outMedia.textContent = "Media de idade : " + idade / cont; 	
 }
-var btverificar = document.getElementById("btverificar");
-btverificar.addEventListener("click", verificaParImpar);
+var btAdd = document.getElementById("btAdd");
+btAdd.addEventListener("click", verificaParImpar);
