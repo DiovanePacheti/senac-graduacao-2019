@@ -35,8 +35,14 @@
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
+function nome(){                                                                                                                                                                                                                                    var inNome = document.getElementById("inNome");
+var outPrimeiroNome = document.getElementById("outPrimeiroNome");                                                         var outNOme = document.getElementById("outNome");
+                                                                                                                          var nome = inNome.value;                                                                                                  var espaco = nome.indexOf(" ");
+var sobrenome = nome.substr(nome.lastIndexOf(" "));
+                                                                                                                          outNome.textContent = nome;                                                                                               outSobrenome.textContent = "Sobrenome : " + sobrenome;                                                                    }                                                                                                                         var btVerifica = document.getElementById("btVerificar");
+btVerifica.addEventListener("click", nome);
 
-	    </pre>
+        </pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>

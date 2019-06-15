@@ -34,8 +34,28 @@
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
+function nome(){
+        
+        var inNome = document.getElementById("inNome");
+        var outSaida = document.getElementById("outSaida");
 
-	    </pre>
+        var nome = inNome.value;
+
+        var simplecomposto;
+
+        /** o metodo indexOf() e usado para pesquisa pelo
+         * espaço (-1 indica que não foi encontrado)*/
+                if(nome.indexOf(" ") == -1){
+                        simplecomposto = "Simple";
+                }else{
+            simplecomposto = "Composto";                                    }
+
+        outSaida.textContent = "Vocẽ digitou um nome "
+        + simplecomposto;
+}
+var btVerifica = document.getElementById("btVerificar");
+btVerifica.addEventListener("click", nome);
+	</pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>

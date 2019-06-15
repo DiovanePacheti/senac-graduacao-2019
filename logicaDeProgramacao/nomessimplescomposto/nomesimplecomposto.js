@@ -1,18 +1,23 @@
 function nome(){
-        alert("oi");
+        
 	var inNome = document.getElementById("inNome");
         var outSaida = document.getElementById("outSaida");
 
 	var nome = inNome.value;
 
-	for(var i=0; i<nome.length;i++){
-	
-		if(nome[i].indexOf(nome[i].charAt(i) == -1{)
-			simplecomposto = "composto";
-		}	
-	}	
+	var simplecomposto;
 
-	outSaida.textContent = "Vocẽ digitou um nome " + simplecomposto;
+	/** o metodo indexOf() e usado para pesquisa pelo
+	 * espaço (-1 indica que não foi encontrado)*/
+		if(nome.indexOf(" ") == -1){
+			simplecomposto = "Simple";
+		}else{	
+            simplecomposto = "Composto";
+		}
+		
+
+	outSaida.textContent = "Vocẽ digitou um nome " 
+	+ simplecomposto;
 }
 var btVerifica = document.getElementById("btVerificar");
 btVerifica.addEventListener("click", nome);
