@@ -23,6 +23,8 @@
                     <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
                 <p class="pergunta">Digite a palavra : <input type="text" id="inPalavra"></p>
+
+                <p class="pergunta">Digite a letra : <input type="text" id="inLetra"></p>
         
                 <p><input class=" btn " type="button" value="Conta" id="btconta"></p>
             </div>
@@ -31,10 +33,37 @@
 
         </div>
     </section>
+    <div>
+        <p>
+            Foi utilizado para resolver este exercicio o metodo  <span>charAt()</span> que retornou a letra na posição passada como paramentro dentro do metodo
+        </p>
+    </div>
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
-
+function calcular() {
+  
+                var inPalavra = document.getElementById("inPalavra");
+                var palavra = inPalavra.value.toLowerCase();
+                
+                var inLetra = document.getElementById("inLetra");
+                var letra = inLetra.value.toLowerCase();
+                
+                var outSaida = document.getElementById("outSaida");
+                
+                var cont = 0;
+                
+                for(var i = 0; i < palavra.length;i++){
+                    if(palavra.charAt(i) == letra){
+                        cont++;
+                    }
+                }
+                outSaida.textContent = "A letra ( " + letra +
+                 " ) aparece " + cont + " veze(s)";
+                }
+                var btconta = document.getElementById("btconta");
+                btconta.addEventListener("click", calcular);
+                
 	    </pre>
     </section>
     <section>
