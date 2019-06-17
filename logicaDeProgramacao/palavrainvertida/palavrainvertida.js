@@ -16,7 +16,7 @@ function convertendo() {
 	inverte += palavra.charAt(i);
     }
     
-    outSaida.textContent = " : " +  inverte;
+    outSaida.textContent = " : " +  inverte.substr(0);
 
 }
 var btInverter = document.getElementById("btInverter");
