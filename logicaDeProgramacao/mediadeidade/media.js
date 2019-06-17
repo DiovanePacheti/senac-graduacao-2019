@@ -9,14 +9,13 @@ function adicionar(){
     var nome  = inNome.value;
     var idade = Number(inIdade.value);
 
-   var outNome = document.getElementById("outNome");
-   var outIdade = document.getElementById("outIdade");	
+   var outAlunos = document.getElementById("outAlunos");	
 
     nomes.push(nome);
     idades.push(idade);
 
-    outNome.textContent = "Nome " + nomes.join(", ");
-    outIdade.textContent = "Idade " + idades.join(", ");	
+    
+    outAlunos.textContent = "Nome " + nomes.join(", ") + "Idade " + idades.join("\n ");	
            
              inNome.value = " ";
 	     inIdade.value = " ";
@@ -55,13 +54,15 @@ function maior(){
    var outMaior = document.getElementById("outMaior");	
 
    for(var i = 0;i < idades.length; i++){
-	posicao = i;
       	if(idades[i] < idades[i+1]){
 	   maiorIdade = idades[i+1];
-	   posicao = (i+1);
   	}
    }
-
+   for(var i = 0; i < idades.length; i++){
+        if(maiorIdade == idades[i]){
+	   posicao = i;
+	}
+   }
    outMaior.textContent = "maior idade é " +  nomes[posicao] + " com " + maiorIdade + " anos ";
 
 }//fim da função maior
