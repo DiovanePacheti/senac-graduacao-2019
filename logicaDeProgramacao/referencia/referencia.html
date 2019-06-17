@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa Par ou Impar</title>
+    <title>Farmácia Avenida</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
@@ -16,19 +16,21 @@
     <section class=" bloco">
 
         <div class="container banner row">
-            <h1>Programa Par Impar</h1>
+            <h1>Programa Referencia Biografica</h1>
             
             <div class=" col s12 center">
                 <div class="card-img container ">
-                    <img class="imagresponsiva" src="../../img/imgrepete.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
+                    <img class="imagresponsiva" src="../../img/imgreferencia.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
-                <p class="pergunta">Digite um numero : <input type="text" id="inNumero" autofocus ></p>
-                
-                <p><input class=" btn " type="button" value="Verificar" id="btverificar"></p>
+                <p class="pergunta">Medicamento: <input type="text" id="inMedicamento"></p>
+                <p class="pergunta">preço R$: <input type="text" id="inPreco"></p>
+                <p><input class=" btn " type="button" value="ver promoção" id="btpromocao"></p>
             </div>
-            
-	    <h3 id="outSaida"></h3>
+            <h2>subtitulo</h2>
+            <pre class="resposta" id="outpromocao"></pre>
             <h3 id="outResposta"></h3>
+            <h3 id="outnotas"></h3>
+            <h3 id="outnotas"></h3>
 
         </div>
     </section>
@@ -47,7 +49,7 @@
     </section>
 
 
-    <script src="parimparcontaDoWhile.js"></script>
+    <script src="farmaciaavenida.js"></script>
 
     <!-- Scripts e links javaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
