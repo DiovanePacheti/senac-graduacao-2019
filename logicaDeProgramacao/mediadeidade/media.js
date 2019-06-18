@@ -51,7 +51,7 @@ btMedia.addEventListener("click", media);
 
 
 function maior(){
-   alert("oi");
+   
    var maiorIdade = idades[0];
    var posicao = 0;
 

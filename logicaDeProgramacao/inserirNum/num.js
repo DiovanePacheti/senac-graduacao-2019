@@ -22,7 +22,7 @@ var btAdd = document.getElementById("btAdd");
 btAdd.addEventListener("click", adicionar);
 
 function soma(){
-
+   
    //var idade = Number(inIdade.value);
    var somando = 0;
 
@@ -35,8 +35,8 @@ function soma(){
    outSomado.textContent = "Somado : " + somando;;
 
 }//fim da função media
-var btSomar = document.getElementById("btSomar");
-btSomar.addEventListener("click", soma);
+var btSoma = document.getElementById("btSoma");
+btSoma.addEventListener("click", soma);
 
 //_-----------------
 /*
