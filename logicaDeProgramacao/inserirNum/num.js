@@ -1,50 +1,45 @@
-var idades = [];
+var numeros = [];
 
-var inNome = document.getElementById("inNome");
-var inIdade = document.getElementById("inIdade");
+var inNumero = document.getElementById("inNumero");
 
 function adicionar(){
 
-    var nome  = inNome.value;
-    var idade = Number(inIdade.value);
+    var numero = Number(inNumero.value);
 
-   var outNome = document.getElementById("outNome");
-   var outIdade = document.getElementById("outIdade");
+   var outNumero = document.getElementById("outNumero");
+   
 
-    nomes.push(nome);
-    idades.push(idade);
+    numeros.push(numero);
 
-    outNome.textContent = "Nome " + nomes.join(", ");
-    outIdade.textContent = "Idade " + idades.join(", ");
+    outNumero.textContent = "Numeros : " + numeros.join(", ");
+    
 
-             inNome.value = " ";
-             inIdade.value = " ";
+             inNumero.value = " ";
              inNumero.focus();
 
 }
 var btAdd = document.getElementById("btAdd");
 btAdd.addEventListener("click", adicionar);
 
-function media(){
+function soma(){
 
    //var idade = Number(inIdade.value);
-   var somaMedia = 0;
-   var mediaDeIdade = 0;
+   var somando = 0;
 
-   var outMedia = document.getElementById("outMedia");
 
-   for(var i = 0; i < idades.length; i++){
-        somaMedia += idades[i];
-        mediaDeIdade = somaMedia / idades.length;
+   var outSomado = document.getElementById("outSomado");
+
+   for(var i = 0; i < numeros.length; i++){
+        somando += numeros[i];
    }
-   outMedia.textContent = "Meida : " + mediaDeIdade + " idade ";
+   outSomado.textContent = "Somado : " + somando;;
 
 }//fim da função media
-var btMedia = document.getElementById("btMedia");
-btMedia.addEventListener("click", media);
+var btSomar = document.getElementById("btSomar");
+btSomar.addEventListener("click", soma);
 
 //_-----------------
-
+/*
 
 function maior(){
    alert("oi");
@@ -52,7 +47,6 @@ function maior(){
    var posicao = 0;
 
    var outMaior = document.getElementById("outMaior");
-/*
    for(var i = 0;i < idades.length; i++){
         posicao = i;
         if(idades[i] < idades[i+1]){
@@ -62,7 +56,7 @@ function maior(){
    }
 
    outMaior.textContent = "maior idade é " nomes[posicao] + " com " + maiorIdade + " anos ";
-*/
+
 }//fim da função maior
 var btMaior = document.getElementById("btMaior");
 btMaior.addEventListener("click", maior);
@@ -84,4 +78,4 @@ function filtro(){
 
 }
 var btFiltro = document.getElementById("btFiltro");
-btFiltro.addEventListener("click", filtro);
+btFiltro.addEventListener("click", filtro);*/

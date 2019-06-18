@@ -9,13 +9,17 @@ function adicionar(){
     var nome  = inNome.value;
     var idade = Number(inIdade.value);
 
-   var outAlunos = document.getElementById("outAlunos");	
+   var outNome = document.getElementById("outNome");	
+   var outIdade = document.getElementById("outIdade");
 
     nomes.push(nome);
     idades.push(idade);
+ 
+    var concatena = " ";
 
+    outNome.textContent = "Nome : " + nomes.join(" - ");
     
-    outAlunos.textContent = "Nome " + nomes.join(", ") + "Idade " + idades.join("\n ");	
+    outIdade.textContent = "Idade : " + idades.join("\n ");	
            
              inNome.value = " ";
 	     inIdade.value = " ";
