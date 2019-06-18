@@ -38,44 +38,26 @@ function soma(){
 var btSoma = document.getElementById("btSoma");
 btSoma.addEventListener("click", soma);
 
-//_-----------------
-/*
 
-function maior(){
-   alert("oi");
-   var maiorIdade = idades[0];
-   var posicao = 0;
 
-   var outMaior = document.getElementById("outMaior");
-   for(var i = 0;i < idades.length; i++){
-        posicao = i;
-        if(idades[i] < idades[i+1]){
-           maiorIdade = idades[i+1];
-           posicao = (i+1);
-        }
+function analisar(){
+	alert("oi");
+   var ordem = " ";
+
+   var outAnalisar = document.getElementById("outAnalisar");
+   for(var i = 0;i < numeros.length; i++){
+        
+        if(numeros[i] < numeros[i+1]){
+           ordem = " foram ";
+        }else{
+	   ordem = " não foram ";
+	}
    }
 
-   outMaior.textContent = "maior idade é " nomes[posicao] + " com " + maiorIdade + " anos ";
+   outAnalisar.textContent = "Os valores" + ordem + "inseridos em ordem";
 
 }//fim da função maior
-var btMaior = document.getElementById("btMaior");
-btMaior.addEventListener("click", maior);
-
-//----------------------
+var btAnalisar = document.getElementById("btAnalisar");
+btAnalisar.addEventListener("click", analisar);
 
 
-function filtro(){
-   var outFiltro = document.getElementById("outFiltro");
-   var fil = Number(prompt("Filtrar por idade maxima : "));
-   var resultado = " ";
-   for(var i = 0 ; i < idades.length; i++){
-      if(idades[i] <= fil){
-        resultado += " " + nomes[i] + ", " +  idades[i] + " \n";
-      }
-   }
-
-   outFiltro.textContent = resultado;
-
-}
-var btFiltro = document.getElementById("btFiltro");
-btFiltro.addEventListener("click", filtro);*/
