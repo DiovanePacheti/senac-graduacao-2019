@@ -82,7 +82,7 @@ function filtro(){
    var resultado = " ";
    for(var i = 0 ; i < idades.length; i++){
       if(idades[i] <= fil){
-        resultado += " " + nomes[i] + ", " +  idades[i] + " \n";
+        resultado +=" " + nomes[i] + ", " +  idades[i] + " \n";
       }
    }
 
