@@ -49,7 +49,6 @@ btMedia.addEventListener("click", media);
 
 //_-----------------
 
-
 function maior(){
    
    var maiorIdade = idades[0];
@@ -59,7 +58,10 @@ function maior(){
 
    for(var i = 0;i < idades.length; i++){
       	if(idades[i] < idades[i+1]){
-	   maiorIdade = idades[i+1];
+	   var aux = idades[i+1];
+	   if(aux > maiorIdade){
+	     maiorIdade = aux;
+	   }
   	}
    }
    for(var i = 0; i < idades.length; i++){
@@ -72,8 +74,6 @@ function maior(){
 }//fim da função maior
 var btMaior = document.getElementById("btMaior");
 btMaior.addEventListener("click", maior);
-
-//----------------------
 
 
 function filtro(){

@@ -47,11 +47,13 @@ function analisar(){
    var outAnalisar = document.getElementById("outAnalisar");
    for(var i = 0;i < numeros.length; i++){
         
-        if(numeros[i] < numeros[i+1]){
+        if(numeros[i] <= numeros[i+1]){
            ordem = " foram ";
-        }else{
+        }
+        if(numeros[i] >= numeros[i+1]){
 	   ordem = " não foram ";
 	}
+
    }
 
    outAnalisar.textContent = "Os valores" + ordem + "inseridos em ordem";
