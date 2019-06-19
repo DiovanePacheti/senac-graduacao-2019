@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,23 +23,36 @@
                 <div class="card-img container ">
                     <img class="imagresponsiva" src="../../img/imgreferencia.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
-                <p class="pergunta">Medicamento: <input type="text" id="inMedicamento"></p>
-                <p class="pergunta">preço R$: <input type="text" id="inPreco"></p>
-                <p><input class=" btn " type="button" value="ver promoção" id="btpromocao"></p>
+                <p class="pergunta">Autor : <input type="text" id="inAutor"></p>
+                <p><input class=" btn " type="button" value="Ajustar Formato" id="btAjuste"></p>
             </div>
             <h2>subtitulo</h2>
-            <pre class="resposta" id="outpromocao"></pre>
-            <h3 id="outResposta"></h3>
-            <h3 id="outnotas"></h3>
-            <h3 id="outnotas"></h3>
+            <h3 id="outReferencia"></h3>
 
         </div>
     </section>
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
+function ajustar(){
+    var inAutor = document.getElementById("inAutor");
+    var autor = inAutor.value;
 
-	    </pre>
+    var ultima = autor.lastIndexOf(" ");
+
+    var refere = autor.substr(ultima);
+    var nomeref = autor.substr(0 , ultima);
+
+    var outReferencia = document.getElementById("outReferencia");
+
+
+    outReferencia.textContent = refere.toUpperCase() + ", " + nomeref;
+
+
+}
+var btAjuste = document.getElementById("btAjuste");
+btAjuste.addEventListener("click", ajustar);
+        </pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>
@@ -49,7 +63,7 @@
     </section>
 
 
-    <script src="farmaciaavenida.js"></script>
+    <script src="referencia.js"></script>
 
     <!-- Scripts e links javaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -58,3 +72,4 @@ lize.min.js"></script>
 </body>
 
 </html>
+
