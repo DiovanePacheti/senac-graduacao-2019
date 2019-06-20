@@ -31,25 +31,39 @@
             <h3 id="outSobrenome"></h3>
 
         </div>
+	<div class= "row container">
+    <div class="col s8 l8 card green lighten-4 white-text">
+        <p>
+	<span class="card-title">lastIndexOf()</span><br/>
+	O método  <span>lastIndexOf()</span> tambem e do objeto <span>String</span> recupera a posição  de um elemento, percorrendo uma sequência de caracteres da sua posição final à inicial ou a posição passada por parâmetro.E se este elemento não existir retorna o valor -1.
+        </p>
+    </div>
+    </div>
     </section>
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
-function nome(){                                                                                                                                                                                                                                    var inNome = document.getElementById("inNome");
-var outPrimeiroNome = document.getElementById("outPrimeiroNome");                                                         var outNOme = document.getElementById("outNome");
-                                                                                                                          var nome = inNome.value;                                                                                                  var espaco = nome.indexOf(" ");
-var sobrenome = nome.substr(nome.lastIndexOf(" "));
-                                                                                                                          outNome.textContent = nome;                                                                                               outSobrenome.textContent = "Sobrenome : " + sobrenome;                                                                    }                                                                                                                         var btVerifica = document.getElementById("btVerificar");
-btVerifica.addEventListener("click", nome);
+function nome(){
+    
+  var inNome = document.getElementById("inNome");
+  var outPrimeiroNome = document.getElementById("outPrimeiroNome");
+  var outNOme = document.getElementById("outNome");
 
+  var nome = inNome.value;
+
+  var sobrenome = nome.substr(nome.lastIndexOf(" "));
+
+  outNome.textContent = nome;
+  outSobrenome.textContent = "Sobrenome : " + sobrenome;
+}
+var btVerifica = document.getElementById("btVerificar");
+btVerifica.addEventListener("click", nome);
         </pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>
         <pre>
-
-
-	    </pre>
+        </pre>
     </section>
 
 
