@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Farmácia Avenida</title>
+    <title>Exibir palavra com Hifens</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
@@ -35,8 +35,27 @@
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
+function calcular() {                                       
+  var inPalavra = document.getElementById("inPalavra");
+  var palavra = inPalavra.value.toUpperCase();
 
-	    </pre>
+
+  var soletra = palavra.charAt(0);
+
+  for(var i = 1; i < palavra.length; i++){
+    soletra += " - " +  palavra.charAt(i)  ;
+  }
+
+  var outHifens = document.getElementById("outHifens");
+  outHifens.textContent = "Você informou : " +  soletra;
+
+  var outSaida = document.getElementById("outSaida"); 
+  outSaida.textContent = "Palavra : " 
+  + palavra.charAt(0) +  palavra.substr(1).toLowerCase();
+}
+var btExibir = document.getElementById("btExibir");
+btExibir.addEventListener("click", calcular);
+	</pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>

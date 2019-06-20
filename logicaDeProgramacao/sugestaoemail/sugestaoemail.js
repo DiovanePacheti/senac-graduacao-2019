@@ -1,13 +1,13 @@
 function email() {
 
-  alert("oi");
+	  
 
   var inNome = document.getElementById("inNome");
   var nome = inNome.value.toLowerCase();
 
   var dividindoNomes = nome.split(" ");
 
-  var numDivisoes = dividindo.length
+  var numDivisoes = dividindoNomes.length
   var email = " ";
 
   for(var i = 0; i < numDivisoes; i++){

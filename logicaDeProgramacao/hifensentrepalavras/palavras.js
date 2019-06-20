@@ -1,19 +1,19 @@
 function calcular() {
-alert("oi");  
+
 var inPalavra = document.getElementById("inPalavra");
 var palavra = inPalavra.value.toUpperCase();
 
 
-var soletra = " ";
+var soletra = palavra.charAt(0);
 
 for(var i = 1; i < palavra.length; i++){
-   soletra += palavra.join(" - ");
+   soletra += " - " +  palavra.charAt(i)  ;
 }
 
 var outHifens = document.getElementById("outHifens");
-outHifens.textContent = soletra;    
+outHifens.textContent = "Você informou : " +  soletra;    
 var outSaida = document.getElementById("outSaida");
-outSaida.textContent = "Nada de mais ainda ";
+outSaida.textContent = "Palavra : " + palavra.charAt(0) +  palavra.substr(1).toLowerCase();
 
 }
 var btExibir = document.getElementById("btExibir");

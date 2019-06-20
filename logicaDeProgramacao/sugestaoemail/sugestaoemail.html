@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Farmácia Avenida</title>
+    <title>Sugestâo de E-mail</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
@@ -22,7 +22,7 @@
                 <div class="card-img container ">
                     <img class="imagresponsiva" src="../../img/imgemail.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
-                <p class="pergunta">Digite o nome completo : <input type="text" id="inNome"></p>
+                <p class="pergunta">Digite o nome completo : <input type="text" id="inNome" autofocus ></p>
                 
                 <p><input class=" btn " type="button" value="Gerar" id="btGerar"></p>
             </div>
@@ -34,8 +34,29 @@
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
+function email() {
+                                                            
 
-	    </pre>
+  var inNome = document.getElementById("inNome");
+  var nome = inNome.value.toLowerCase();
+  var dividindoNomes = nome.split(" ");
+  var numDivisoes = dividindoNomes.length
+
+  var email = " ";
+
+
+  for(var i = 0; i < numDivisoes; i++){
+     email += dividindoNomes[i].charAt(0);
+  }
+
+  var outEmail = document.getElementById("outEmail");
+  outEmail.textContent = "E-mail : " + email.toLowerCase() 
+  + "@senac.com.br"; 
+
+}
+var btGerar = document.getElementById("btGerar");
+btGerar.addEventListener("click", email);
+	</pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>

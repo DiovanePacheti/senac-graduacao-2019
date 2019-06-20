@@ -1,22 +1,18 @@
 function convertendo() {
-   alert("oi");
-	
+   	
     var inPalavra = document.getElementById("inPalavra");
     var palavra = inPalavra.value;
 
     var outSaida = document.getElementById("outSaida");
     
 
-    var palavra = inPalavra.value;
-    
-    var inverte = " er ";
-
+    var invertida = " ";
     	
-    for(var i = palavra.lenght-1; i >= 0 ; i--){
-	inverte += palavra.charAt(i);
+    for(var i = palavra.length-1; i >= 0 ; i--){
+	invertida += palavra.charAt(i);
     }
     
-    outSaida.textContent = " : " +  inverte.substr(0);
+    outSaida.textContent = palavra + " : " +  invertida.charAt(1).toUpperCase() +  invertida.substr(2).toLowerCase();
 
 }
 var btInverter = document.getElementById("btInverter");
