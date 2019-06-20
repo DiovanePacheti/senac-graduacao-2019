@@ -22,20 +22,52 @@
                 <div class="card-img container ">
                     <img class="imagresponsiva" src="../../img/imgendereco.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
-                <p class="pergunta">Local(formato rua,nº - cidade) : <input type="text" id="inEndereco"></p>
+                <p class="pergunta">Local(formato rua,nº - cidade) : <input type="text" id="inEndereco" autofocus ></p>
                 <p><input class=" btn " type="button" value="Verificar" id="btVerificar"></p>
             </div>
             <h2>subtitulo</h2>
             
-            <h3 id="outEndereco"></h3>
+            <h3 id="outRua"></h3>
+	    <h3 id="outNumero"></h3>
+	    <h3 id="outCidade"></h3>
 
         </div>
     </section>
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
+function adicionar(){
+    var inEndereco = document.getElementById("inEndereco");
+    var endereco = inEndereco.value;
 
-	    </pre>
+    var outRua = document.getElementById("outRua");
+    var outNumero = document.getElementById("outNumero");
+    var outCidade = document.getElementById("outCidade");
+                                                                           if(endereco == " "){
+        alert("Endereço não informado !");
+        inEndereco.focus();
+        return;
+    }
+
+    var virgula = endereco.indexOf(",");
+    var traco = endereco.lastIndexOf("-");
+                                                                           if(virgula == -1 || traco == -1){
+        alert("Informe os dados no formato indicado (Eua, Número - Cidade)");                                                                         inEndereco.focus();
+        return;
+    }
+                                                                           var rua = endereco.substr(0, virgula);
+    var numero = endereco.substr(virgula+1, traco - (virgula+1));
+    var cidade = endereco.substr(traco+1);
+
+    outRua.textContent = "Rua : " + rua;
+    outNumero.textContent = "Número : " + numero;
+    outCidade.textContent = "Cidade : " + cidade;
+
+
+}
+var btVerificar = document.getElementById("btVerificar");
+btVerificar.addEventListener("click", adicionar);
+        </pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>
