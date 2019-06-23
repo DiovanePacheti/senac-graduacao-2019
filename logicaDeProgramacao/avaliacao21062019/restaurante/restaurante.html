@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurante Avenida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Restaurante Avenida</h1>
+            
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">Mesa Nº : <input type="text" id="inMesa"></p>
+                <p class="pergunta">COnta  R$: <input type="text" id="inConta"></p>
+                <p><input class=" btn " type="button" value="Adicionar" id="btAdd"></p>
+		<p><input class=" btn " type="button" value="Canta + Taxa" id="btTaxa"></p>
+            </div>
+            
+            
+            <h3 id="outSaida"></h3>
+            <pre id="outSaidaTaxa"></pre>
+            
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+		var mesas = [];
+var contas = [];
+
+var inMesa = document.getElementById("inMesa");
+var inConta = document.getElementById("inConta");
+
+function add (){
+
+    var mesa = inMesa.value;
+    var conta = Number(inConta.value);
+
+    mesas.push(mesa);
+    contas.push(conta);
+
+
+    var outSaida = document.getElementById("outSaida");
+    outSaida.textContent = mesas + " - " + contas + "\n";
+
+    
+    inConta.value = " ";
+    inMesa.value = " ";
+    inMesa.focus();
+    return;
+}//fim da funçao
+var btAdd = document.getElementById("btAdd");
+btAdd.addEventListener("click", add);
+
+function taxa (){
+    
+    var taxa = 0.10;
+
+    var mesasTaxadas = " ";
+
+    var outSaidaTaxa = document.getElementById("outSaidaTaxa");
+
+    for(var i = 0 ; i < contas.length; i++){
+        mesasTaxadas += mesas[i] + " valor da mesa com taxa de 10% = " + (contas[i] * taxa) + "\n"; 
+    }
+
+    outSaidaTaxa.textContent = mesasTaxadas;
+
+
+
+}//fim da function taxa
+var btTaxa = document.getElementById("btTaxa");
+btTaxa.addEventListener("click", taxa);
+	</pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
+    <script src="restaurante.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>
