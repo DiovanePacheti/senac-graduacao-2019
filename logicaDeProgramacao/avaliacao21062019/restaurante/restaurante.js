@@ -34,7 +34,7 @@ function taxa (){
     var outSaidaTaxa = document.getElementById("outSaidaTaxa");
 
     for(var i = 0 ; i < contas.length; i++){
-        mesasTaxadas += mesas[i] + " valor da mesa com taxa de 10% = " + (contas[i] * taxa) + "\n"; 
+        mesasTaxadas += mesas[i] + " valor da mesa com taxa de 10% = " + (contas[i] + (contas[i] * taxa)) + "\n"; 
     }
 
     outSaidaTaxa.textContent = mesasTaxadas;

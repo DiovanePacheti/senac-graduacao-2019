@@ -20,10 +20,11 @@
             
             <div class=" col s12 center">
                 <div class="card-img container ">
-                    <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                    <img class="imagresponsiva" src="../../img/.png" alt="foto do quadro com o exercicio da farmacia avenida">
                 </div>
-                <p class="pergunta">Mesa Nº : <input type="text" id="inMesa"></p>
-                <p class="pergunta">COnta  R$: <input type="text" id="inConta"></p>
+                <p class="pergunta">Mesa Nº : <input type="text" id="inMesa" autofocus ></p>
+                <p class="pergunta">Conta R$ : <input type="text" id="inConta"></p>
+
                 <p><input class=" btn " type="button" value="Adicionar" id="btAdd"></p>
 		<p><input class=" btn " type="button" value="Canta + Taxa" id="btTaxa"></p>
             </div>
@@ -38,7 +39,7 @@
     <section class="linha">
         <h2 class="center">Código em JavaScript</h2>
         <pre class="fundo">
-		var mesas = [];
+var mesas = [];
 var contas = [];
 
 var inMesa = document.getElementById("inMesa");
@@ -84,7 +85,7 @@ function taxa (){
 }//fim da function taxa
 var btTaxa = document.getElementById("btTaxa");
 btTaxa.addEventListener("click", taxa);
-	</pre>
+    </pre>
     </section>
     <section>
         <h2 class="center">Código em Java</h2>
