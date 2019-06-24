@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Farmácia Avenida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../cssLogica/logica.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Banco Avenida</h1>
+            <h2>Organizando filas </h2>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">Nome : <input type="text" id="inNome"></p>
+                <p class="pergunta">Idade : <input type="text" id="inIdade"></p>
+                <p><input class=" btn " type="button" value="Adiciionar" id="btAdd"></p>
+		<p><input class=" btn " type="button" value="Organizar Fila" id="btFila"></p>
+            </div>
+            <h2>Clientes : </h2>
+	    <h3 id="outChegada"></h3>
+            <pre class="resposta" id="outNormal"></pre>
+	    <pre class="resposta" id="outPreferencial">
+            
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+var nomes = [];
+var idades = [];
+
+var inNome = document.getElementById("inNome");
+var inIdade = document.getElementById("inIdade");
+
+function add (){
+
+    var nome = inNome.value;
+    var idade = Number(inIdade.value);
+
+    nomes.push(nome);
+    idades.push(idade);
+
+
+    var outChegada = document.getElementById("outChegada");
+
+
+    outChegada.textContent = nomes + " - " + idades ;
+
+    
+    inNome.value = " ";
+    inIdade.value = " ";
+    inNome.focus();
+    return;
+}//fim da funçao
+var btAdd = document.getElementById("btAdd");
+btAdd.addEventListener("click", add);
+
+function organizarFila (){
+    
+    var filaNormal = "Fila Normal : " + "\n-----------------\n";
+    var filaPreferencial =  "Fila Prefêrencial :  \n--------------\n" ;
+
+    var outNormal = document.getElementById("outNormal");
+    var outPreferencial = document.getElementById("outPreferencial");
+
+    for(var i = 0; i < idades.length; i++){
+        if(idades[i] <= 64){
+            filaNormal += nomes[i] + " - " + idades[i] + " anos"+ "\n";
+        }else if(idades[i] >= 65){
+            filaPreferencial += nomes[i] + " - " + idades[i] + " anos"+ "\n";
+        }
+    }
+
+    outNormal.textContent = filaNormal;
+    outPreferencial.textContent = filaPreferencial;
+
+}//fim da function taxa
+var btFila = document.getElementById("btFila");
+btFila.addEventListener("click", organizarFila);
+	</pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
+    <script src="banco.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>

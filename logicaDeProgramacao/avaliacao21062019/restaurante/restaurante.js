@@ -1,5 +1,7 @@
 var mesas = [];
 var contas = [];
+/* criando um array de Objstos
+var restaurante = {} */'
 
 var inMesa = document.getElementById("inMesa");
 var inConta = document.getElementById("inConta");
