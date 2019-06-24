@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruta - Letras Comuns</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../cssLogica/logica.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Frutas - Letras Comuns</h1>
+            
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">1º Fruta : <input type="text" id="inFrutaUm"></p>
+                <p class="pergunta">2º Fruta : <input type="text" id="inFrutaDois"></p>
+                <p><input class=" btn " type="button" value="Verificar" id="btVerificar"></p>
+            </div>
+            <h2>Resposta : </h2>
+            <pre class="resposta" id="outLetras"></pre>
+            
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function letrasComuns (){
+
+    var inFrutaUm = document.getElementById("inFrutaUm");
+    var inFrutaDois = document.getElementById("inFrutaDois");
+
+    var fruta1 = inFrutaUm.value.toLowerCase();
+    var fruta2 = inFrutaDois.value.toLowerCase();
+    var letrasIguais = " ";
+
+    var tam1 = fruta1.length;
+    var tam2 = fruta2.length;
+
+    for(var i = tam1; i>0; i--){
+        for(var j = 0 ; j < tam2 ; j++){
+            if(fruta1.charAt(i) == fruta2.charAt(j)){
+                letrasIguais += fruta1.charAt(i) + ", ";
+            }
+        }
+    }
+    var outLetras = document.getElementById("outLetras");
+    outLetras.textContent = "Letras Comuns : " + letrasIguais ;
+
+    
+}//fim da funçao
+var btVerificar = document.getElementById("btVerificar");
+btVerificar.addEventListener("click", letrasComuns);
+	</pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
+    <script src="fruta.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>
