@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dominio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../cssLogica/logica.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Dominio</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">Nome : <input type="text" id="inNome"></p>
+                
+                <p><input class=" btn " type="button" value="Ver Dominio" id="btDominio"></p>
+            </div>
+        
+            <h4 id="outDominio"></h4>
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function criaDominio (){
+
+    var inNome = document.getElementById("inNome");
+
+    var nome = inNome.value;
+
+    var nomeDom = nome.split(" ");
+    var partesDoNome = nomeDom.length;
+    var nomevalido = "";
+
+    for(var i = 0 ; i < partesDoNome ; i++){
+        nomevalido += nomeDom[i].substr();
+
+        /*for(var j = 0; partesDoNome[i].length; j++){
+            nomevalido += partesDoNome[j];
+        }*/
+    }
+
+
+    var outDominio = document.getElementById("outDominio");
+    outDominio.textContent = "WWW." + nomevalido.toLowerCase() + ".com.br";
+
+    
+    inNome.value = " ";
+    inNome.focus();
+    return;
+}//fim da funçao
+var btDominio = document.getElementById("btDominio");
+btDominio.addEventListener("click", criaDominio);
+        </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
+    <script src="dominio.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>
