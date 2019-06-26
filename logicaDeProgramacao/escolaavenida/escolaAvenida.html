@@ -63,6 +63,42 @@ btCalcular.addEventListener("click", calcularMedia);
      <section>
             <h2 class="center">Código em Java</h2>
             <pre>
+package calcular;
+
+import java.util.Scanner;
+
+public class CalcularMedia {
+
+  public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+
+    double notaUm = 0;
+    double notaDois = 0;
+    double media = 0;
+    String statusCurricular = " ";
+
+    System.out.print("Digite nota 1° : ");
+    notaUm = scan.nextInt();
+
+    System.out.print("Digite nota 2° : ");
+    notaDois = scan.nextInt();
+
+    media = (notaUm + notaDois) / 2;
+
+    if (media <= 5) {
+      statusCurricular = "foi : Reprovado";
+    } else if (media > 5 && media < 6) {
+      statusCurricular = "esta de : Recuperação";
+    } else if (media > 6) {
+      statusCurricular = "foi : Aprovado";
+    }
+
+    System.out.print("Media : " + media + "\nO Aluno " 
+    + statusCurricular);
+  } // fim do method main
+} // fim da classe
+
 	    </pre>
     </section>
     <script src="escolaAvenida.js"></script>
