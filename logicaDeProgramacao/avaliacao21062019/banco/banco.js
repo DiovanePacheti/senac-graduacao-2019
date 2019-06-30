@@ -1,4 +1,12 @@
-var nome = inNome.value;
+var nomes = [];
+var idades = [];
+
+var inNome = document.getElementById("inNome");
+var inIdade = document.getElementById("inIdade");
+
+function add (){
+
+    var nome = inNome.value;
     var idade = Number(inIdade.value);
 
     nomes.push(nome);
@@ -21,8 +29,8 @@ btAdd.addEventListener("click", add);
 
 function organizarFila (){
     
-    var filaNormal = "Fila Normal : " + "\n-----------------\n";
-    var filaPreferencial =  "Fila Prefêrencial :  \n--------------\n" ;
+    var filaNormal = "Fila Normal : " + "\n-----------------------\n";
+    var filaPreferencial =  "Fila Prefêrencial :  \n----------------------------\n" ;
 
     var outNormal = document.getElementById("outNormal");
     var outPreferencial = document.getElementById("outPreferencial");
