@@ -11,34 +11,33 @@
     <link href="../../logicaDeProgramacao/cssLogica/logica.css" rel="stylesheet">
     <style >
         p.linhaCal{ margin:0 25%;}
-        
+        p.visor{width:99% background-color:#eceff1; font-size: 2.5em; height: 60px; border-radius:3px 3px 0 0;}
         .btTam{width:33%; height:80px;}
     </style>
 </head>
 
 <body>
-    <section class=" bloco blue darken-1">
+    <section class=" bloco ">
         
-                <p class="outResultado linhaCal row blue accent-2">
-                    Resposta :
-                </p>    
+                <p id="outpromocao" class="visor linhaCal row " > 
+		</p>    
                 <p class="linhaCal row ">
-                    <input class=" btTam btn col 4 " type="button" value=" 1 " id="btUm">
-                    <input class=" btTam btn col 4 " type="button" value=" 2 " id="btDois">
-                    <input class=" btTam btn col 4 " type="button" value=" 3 " id="btTres">
+                    <input class=" btTam btn col 4 " type="button" value="1" id="btUm" onclick="botao1();">	
+                    <input class=" btTam btn col 4 " type="button" value="2" id="btDois" onclick="botao2();">
+                    <input class=" btTam btn col 4 " type="button" value="3" id="btTres" onclick="botao3();">
                 </p>
                 <p class="linhaCal row">
-                    <input class=" btTam btn col 4 " type="button" value=" 4 " id="btQuatro">
-                    <input class=" btTam btn col 4 " type="button" value=" 5 " id="btCinco">
-                    <input class=" btTam btn col 4 " type="button" value=" 6 " id="btSeis">
+                    <input class=" btTam btn col 4 " type="button" value="4" id="btQuatro" onclick="botao4();">
+                    <input class=" btTam btn col 4 " type="button" value="5" id="btCinco" onclick="botao5();">
+                    <input class=" btTam btn col 4 " type="button" value="6" id="btSeis" onclick="botao6();">
                 </p>
                 <p class="linhaCal row">
-                    <input class=" btTam btn col 4 " type="button" value=" 7 " id="btSete">
-                    <input class=" btTam btn col 4 " type="button" value=" 8 " id="btOito">
-                    <input class=" btTam btn col 4 " type="button" value=" 9 " id="btNove">
+                    <input class=" btTam btn col 4 " type="button" value="7" id="btSete" onclick="botao7();">
+                    <input class=" btTam btn col 4 " type="button" value="8" id="btOito" onclick="botao8();">
+                    <input class=" btTam btn col 4 " type="button" value="9" id="btNove" onclick="botao9();">
                 </p>
                 <p class="linhaCal row">
-                    <input class=" btTam btn col 4 " type="button" value=" 0 " id="btZero">
+                    <input class=" btTam btn col 4 " type="button" value="0" id="btZero" onclick="botao0();">
                     <input class=" btTam btn col 4 " type="button" value=" . " id="btnadaa">
                     <input class=" btTam btn col 4 " type="button" value=" , " id="btnada">
                 </p>
@@ -66,7 +65,7 @@
     </section>
 
 
-    <script src="farmaciaavenida.js"></script>
+    <script src="calculadora.js"></script>
 
     <!-- Scripts e links javaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
