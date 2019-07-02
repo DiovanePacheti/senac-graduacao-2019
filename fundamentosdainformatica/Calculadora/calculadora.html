@@ -11,16 +11,34 @@
     <link href="../../logicaDeProgramacao/cssLogica/logica.css" rel="stylesheet">
     <style >
         p.linhaCal{ margin:0 25%;}
-        p.visor{width:99% background-color:#eceff1; font-size: 2.5em; height: 60px; border-radius:3px 3px 0 0;}
-        .btTam{width:33%; height:80px;}
+        p.visor{ background-color : #eceff1; 
+                font-size: 2.5em; 
+                height: 60px; 
+                border-radius:3px 3px 0 0;
+        }
+        .btTamOperacoes{
+                background-color: #424242 ;
+                align: center;
+                width: 15%;
+                margin:3px 25px 3px 25px;
+        }      
+        .btTam{width:33%; 
+               height:80px;
+        }
+        textarea.outpromocao{font-size:20px; }
     </style>
 </head>
 
 <body>
     <section class=" bloco ">
         
-                <p id="outpromocao" class="visor linhaCal row " > 
-		</p>    
+                <p class="visor linhaCal row " > <textarea id="outpromocao" class="materialize-textarea"></textarea></p>
+                <p class="linhaCal row ">
+                    <input class=" btTamOperacoes btn col 4 " type="button" value="dec" id="btDec" onclick="decimal();">
+                    <input class=" btTamOperacoes btn col 4 " type="button" value="bin" id="btBin" onclick="binario();">
+                    <input class=" btTamOperacoes btn col 4 " type="button" value="dec" id="btDec" onclick="oqtal();">
+                    <input class=" btTamOperacoes btn col 4 " type="button" value="dec" id="btDec" onclick="hexadecimal();">	
+                </p>    
                 <p class="linhaCal row ">
                     <input class=" btTam btn col 4 " type="button" value="1" id="btUm" onclick="botao1();">	
                     <input class=" btTam btn col 4 " type="button" value="2" id="btDois" onclick="botao2();">
@@ -41,13 +59,6 @@
                     <input class=" btTam btn col 4 " type="button" value=" . " id="btnadaa">
                     <input class=" btTam btn col 4 " type="button" value=" , " id="btnada">
                 </p>
-              
-            <h2>subtitulo</h2>
-            <pre class="resposta" id="outpromocao"></pre>
-            <h3 id="outResposta"></h3>
-            <h3 id="outnotas"></h3>
-            <h3 id="outnotas"></h3>
-
         
     </section>
     <section class="linha">
