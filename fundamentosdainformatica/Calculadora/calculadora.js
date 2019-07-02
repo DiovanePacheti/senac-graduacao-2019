@@ -118,7 +118,10 @@ function decimal(){
 function binario(){
     //variavel obtendo valor digitado
     var valor = Number(coletor);
-    //variavel que ira concatenar o resto da divisao do numero ate zerar
+
+    /*variavel que ira concatenar o resto da 
+      divisao do numero ate zerar
+    */
     var numeroBinario = "";
 
     /**
@@ -131,7 +134,7 @@ function binario(){
         divisao = Math.trunc(valor/2);
         novovalor = divisao
         valor = novovalor
-        alert(valor);
+        
 
         if(valor == 0){
             break;
