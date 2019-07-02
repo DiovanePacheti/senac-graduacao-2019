@@ -112,4 +112,41 @@ function decimal(){
     // retornando o resultado 
     outpromocao.textContent = numeroDecimal + " Decimal ";
 
-}
+}//fim da função convertendo binario para decimal
+
+//Criando a função decimal para binario
+function binario(){
+    //variavel obtendo valor digitado
+    var valor = Number(coletor);
+    //variavel que ira concatenar o resto da divisao do numero ate zerar
+    var numeroBinario = "";
+
+    /**
+     * utilizando a estrutura repita um loop
+     * do/while ate o resultado da diviso ser 
+     * zero e terminar a divisao com um break
+     */
+    do{
+        numeroBinario += valor%2
+        divisao = Math.trunc(valor/2);
+        novovalor = divisao
+        valor = novovalor
+        alert(valor);
+
+        if(valor == 0){
+            break;
+        }
+
+    }while(true);       
+    /*variavel que vai inverter a string numeroBinario 
+        para acertar a saida para o sequencia correta
+    */
+    var numeroBinarioAjustado ="";
+
+    for(var i = numeroBinario.length; i>=0;i--){
+        
+        numeroBinarioAjustado += numeroBinario.charAt(i);
+    }
+     outpromocao.textContent = numeroBinarioAjustado;    
+    
+}//fim da função binario para 
