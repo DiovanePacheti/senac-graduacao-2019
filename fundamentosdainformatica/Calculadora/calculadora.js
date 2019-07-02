@@ -110,7 +110,7 @@ function decimal(){
     }
     
     // retornando o resultado 
-    outpromocao.textContent = numeroDecimal + " Decimal ";
+    outpromocao.textContent = numeroDecimal ;
 
 }//fim da função convertendo binario para decimal
 
