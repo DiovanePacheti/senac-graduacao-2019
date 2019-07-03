@@ -1,3 +1,4 @@
+
 var outpromocao = document.getElementById("outpromocao");
 var coletor = ""//variavel que vai concatenar a string para enviar as funçoes
 function botao0() {
@@ -110,7 +111,7 @@ function decimal(){
     }
     
     // retornando o resultado 
-    outpromocao.textContent = numeroDecimal + " Decimal ";
+    outpromocao.textContent = numeroDecimal;
 
 }//fim da função convertendo binario para decimal
 
@@ -229,4 +230,47 @@ function DeOctal(){
     }
      outpromocao.textContent = numeroOctalAjustado;    
     
-}//fim da função binario para
+}//fim da função binario para 
+
+//função converte octal para decimal
+function hexadecimall(){
+    
+    //capiturando o valor digitado
+    var valor = coletor;
+    
+    //variavel que ira receber o o resultado em numero decimal
+    var numeroDecimal = 0;
+    var potencia = [];
+    //variavel que vai inverter o valor de entrada
+    var valorInvertido = "";
+
+    //vetor que ira receber os valores convertidos em 
+    var vetorValorInt = [];
+    //invertendo valor com loop for
+    for(var i = valor.length-1; i >= 0 ; i--){
+        valorInvertido += valor.charAt(i);
+       
+        }
+
+    //vetor que vai receber os valores convertidos em tipo Number int
+    for(var i = 0 ;i < valor.length; i++){
+        vetorValorInt[i] = parseInt(valorInvertido.charAt(i));
+    }   
+    
+    /*vetor de potencia que ira ser somado as potencias que 
+      corresponderem aos valor um da string inputada  
+    */
+    var potencia = [1, 8, 64, 512, 4096, 32768, 262144 ];
+
+    for(var i = 0;i < valor.length; i++){
+            
+                //somando os valores das potencias
+                
+                numeroDecimal += (potencia[i]*vetorValorInt[i]); 
+                
+    }
+    
+    // retornando o resultado 
+    outpromocao.textContent = numeroDecimal;
+
+}//fim da função convertendo binario para decimal
