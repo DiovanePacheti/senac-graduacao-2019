@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restaurante Avenida</title>
+    <title>Farmácia Avenida</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../cssLogica/logica.css" rel="stylesheet">
 
 </head>
-<body>	
-<section class=" bloco">
-   <div class="container banner row">
-    <h1>Restaurante Avenida</h1>
-    <div class=" col s12 center">
-    <h2>Buffet à Kg</h2>
-    <p>
-        Preço Kg :
-        <input type="text" name="" id="inPrecoKg">
-    </p>
 
-    <p>
-        Consumo gr :
-        <input type="text" name="" id="inConsumo">
-    </p>
+<body>
+    <section class=" bloco">
 
-    <p>
-        <input class=" btn "type="button" value="Calcular" id="btCalcular">
+        <div class="container banner row">
+            <h1>Restaurante Avenida</h1>
+            <h2>Buffet à Kg</h2>
+            <div class=" col s12 center">
+        
+                <p class="pergunta">Preço Kg : <input type="text" id="inPrecoKg"></p>
+                <p class="pergunta">Consumo gr : <input type="text" id="inConsumo"></p>
+                <p><input class=" btn " type="button" value="Calcular" id="btCalcular"></p>
+            </div>
+            
+            <h3 id="outApagar"></h3>
 
-    </p>
-    
-    <h3 id="outApagar"></h3>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function calcularConta(){          
+    var inPrecoKg = document.getElementById("inPrecoKg");
+    var preco = Number(inPrecoKg.value);
 
-    </div>
-   </div>
-</section>
+    var inConsumo = document.getElementById("inConsumo");
+    var consumo = Number(inConsumo.value);
+
+    //conta feita ja que o consumo esta em grama e dividir consumo por 1000
+    var apagar = (consumo / 1000) * preco
+
+    //capitura o elemento out resposta
+    var outRespostaModelo = document.getElementById("outApagar");
+    outRespostaModelo.textContent = "À pagar R$ : " + apagar;
+
+
+}//fim da function calcular
+//vamos obter o ducumento que tiver o ID btMostrar
+var btCalcular = document.getElementById("btCalcular");
+
+//quando clicarmos no botao vamos chamar a funçao
+btCalcular.addEventListener("click", calcularConta);
+        </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+            </pre>
+    </section>
+
+
     <script src="restauranteAvenida.js"></script>
-    <!-- Scripts e links javaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
