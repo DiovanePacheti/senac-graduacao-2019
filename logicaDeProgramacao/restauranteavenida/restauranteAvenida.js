@@ -1,7 +1,13 @@
-function calcularConta(){                                                                                                                          
+/***
+ * Função que vai receber o valor do quilo e o comsmo e gramas
+ * e retornar o valor ha ser pago 
+ */
+function calcularConta(){        
+    //recebendo o valor do quilo                                                                                                                  
     var inPrecoKg = document.getElementById("inPrecoKg");
     var preco = Number(inPrecoKg.value);
 
+    //recemendo o consumo em gramas
     var inConsumo = document.getElementById("inConsumo");
     var consumo = Number(inConsumo.value);
 

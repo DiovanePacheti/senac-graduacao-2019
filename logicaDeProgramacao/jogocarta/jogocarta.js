@@ -19,5 +19,4 @@ function calcularDuracao(){
 
 }//fim da function
 var btCalcularDuracao = document.getElementById("btCalcularDuracao");
-b
-s tCalcularDuracao.addEventListener("click", calcularDuracao);
+btCalcularDuracao.addEventListener("click", calcularDuracao);

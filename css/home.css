@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
 /* ----- HEIGHT 100% -------- */
 html, body {height: 100%;}
 
@@ -10,12 +12,24 @@ html, body {height: 100%;}
 /* --------- MENU MOBILE ----- */
 .sidenav{ background-color: transparent ;}
 .sidenav li>a{color: #4db6ac; font-height:100;}
-
+/* estilizando as letras DIO END do logo da imagem parallax*/
+.estiloDioend{
+  text-shadow: #000 3px 3px 3px;
+  margin-top: 0;
+  font-size: 3em;
+  color: #fff;
+  font-family: 'Luckiest Guy', cursive;
+}
 /* ---------- HOME ---------- */
 .home { background-image : url('../img/temp.png'); background-repeat: no-repeat; background-size:cover;}
 .home { background-color : #000}
 .banner h2 { font-size: 2.5rem; font-weight : 900; text-transform: uppercase;}
-
+/*---------- Section javascript ----------------*/
+#javascriptSection{ background-color:#009688; color: #000; font-size :60%;}
+#javascriptSection a{ color: #000; font-size :0.8em;}
+.estiloFonts{ font-family: 'Leckerli One', cursive;}
+.corCinza{color:#000;}
+#javaSection{color:#fff; background-color:#212121; width:100%; font-size:70%; padding:8px;}
 nav{
   color :;
   background-color: #ee6e73 ;
@@ -62,9 +76,24 @@ p {
 /*-------- SOBRE --------- */
 .sobre {background-image: url('../img/textura1.png')}
 .sobre h2{font-size: 2rem; color: #212121; text-transform: uppercase;}
-.sobre h2:after{content:'';display: block; width: 100px; border-top:1px solid #4db6ac; margin:15px auto;
+.sobre h2:after{content:'';display: block; width: 100px; border-top:1px solid #4db6ac; margin:15px auto;}
 .sobre p { line-height: 1.8rem; text-align: justify;}
-	
+  
+#wrapper {
+  
+  overflow: hidden;
+  transition: height 150ms;
+  height: 0; /* <-- set this */
+}
+
+.imgParallax{
+	width:100%;
+}
+
+.btnContinue{
+	margin:3px auto ;
+}
+.imgLogo{ margin-top:150px;
 /*MEDIA*/
 @media only screen and(max-width: 480px){
 h2{ font-size: 1rem;}
@@ -76,6 +105,7 @@ h2{ font-size: 1rem;}
 
 @media only screen and(min-width: 993px){
 .banner {padding-top: 4.5rem; }
+
 } 
 
 /*Sobre*/

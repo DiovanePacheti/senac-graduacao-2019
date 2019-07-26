@@ -10,15 +10,16 @@ function pagto(){
 
     var valorPeixe = 5;
 
-    var peixeExtra = pessoa - peixe;
-
+    //Utilizando o metodo Math.abs para retornar o valor positivo 
+    var peixeExtra = Math.abs(pessoa - peixe);
+    alert(peixeExtra);
     if (peixeExtra > 0){
         peixeExtra = peixeExtra * valorPeixe;
     }
-
+    alert(peixeExtra);
     var outPagar = document.getElementById("outPagar");
     outPagar.textContent = "Pagar R$ : " + (peixeExtra + pagarPorPessoa).toFixed(2);
 
 }//fim da function
-var calcularPagto = document.getElementById("calcularPagto");
-calcularPagto.addEventListener("click", pagto);
+var btcalcularPagto = document.getElementById("btcalcularPagto");
+btcalcularPagto.addEventListener("click", pagto);

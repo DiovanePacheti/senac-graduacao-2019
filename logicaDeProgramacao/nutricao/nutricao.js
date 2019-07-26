@@ -16,7 +16,7 @@ function calcularImc() {
     }else if(sexo == "m" || sexo == "M"){
         peso = 22;
     }
-
+    altura *= 100;
     var pesoIdeal = peso * (altura * altura);
 
     var outSaida = document.getElementById("outSaida");
