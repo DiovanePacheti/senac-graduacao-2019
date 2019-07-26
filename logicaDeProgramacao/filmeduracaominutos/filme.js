@@ -1,17 +1,14 @@
-function verificaParImpar(){
+function calculandoTempo(){
     var inNumero = document.getElementById("inNumero");
     var outResposta = document.getElementById("outResposta");
 
     var numero = Number(inNumero.value);
 
-    for(var i = 0; i < numero ; i++){
+    var horas = Math.trunc(numero/60);
 
-       if(numero%2==0){
-          outResposta.textContent = "O numero " + numero + " é Par ! ";
-       }else{
-          outResposta.textContent = "O numero " + numero + "é Impar !";
-       }
-    }//fim do for
+    var minutos = numero%60;
+
+    outResposta.textContent = "filme dura " + horas + " horas " + minutos + " minutos"
 }
 var btverificar = document.getElementById("btverificar");
-btverificar.addEventListener("click", verificaParImpar);
+btverificar.addEventListener("click", calculandoTempo);

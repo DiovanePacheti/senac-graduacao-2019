@@ -8,7 +8,7 @@ function figurinhas(){
         var troco = valor % 2;
 
 	var outPacotes = document.getElementById("outPacotes");
-	outPacotes.textContent = qtdpacote + " - Pacotes " + qtdfigurinhas + " - Fifurinhas" ;
+	outPacotes.textContent = qtdpacote + " - Pacotes , " + qtdfigurinhas + " - Figurinhas" ;
         
         if(troco > 0){
 		var outTroco = document.getElementById("outTroco");

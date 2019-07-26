@@ -21,9 +21,9 @@ function adicionar(){
     
     outIdade.textContent = "Idade : " + idades.join("\n ");	
            
-             inNome.value = " ";
-	     inIdade.value = " ";
-             inNumero.focus();	
+         inNome.value = " ";
+	      inIdade.value = " ";
+         inNumero.focus();	
     
 }
 var btAdd = document.getElementById("btAdd");

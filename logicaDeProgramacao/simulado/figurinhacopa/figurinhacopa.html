@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa Figurinhas da Copa</title>
+    <title>Programa Figurinha Copa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h2>Programa Figurinhas da Copa</h2>
-    <img src="../../../img/imgfigurinhacopa.png" alt="" >
-    <p>Valor RS: <input type="text" id="inValor"></p>
+    <section class=" bloco">
 
-    <p><input type="button" value="Calcular Pacotes" id="btCalcular"></p>
+        <div class="container banner row">
+            <h1>Figurinha Copa</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../../img/imgfigurinhacopa.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">Valor R$ : <input type="text" id="inValor"></p>
+                <p><input class=" btn " type="button" value="Calcular Pacotes" id="btCalcular"></p>
+            </div>
+            <h3 id="outPacotes"></h3>
+            <h3 id="outTroco"></h3>
 
-    <h3 id="outPacotes"></h3>
-    <h3 id="outTroco"></h3>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function figurinhas(){
+
+    var inValor = document.getElementById("inValor");
+    var valor = Number(inValor.value);
+
+    var qtdpacote = Math.trunc(valor / 2);
+    var qtdfigurinhas = qtdpacote * 5;
+        var troco = valor % 2;
+
+    var outPacotes = document.getElementById("outPacotes");
+    outPacotes.textContent = qtdpacote + " - Pacotes , " + qtdfigurinhas + " - Figurinhas" ;
+        
+        if(troco > 0){
+        var outTroco = document.getElementById("outTroco");
+        outTroco.textContent = "Troco R$ : " + troco.toFixed(2);
+    }
+
+
+}//fim da function
+var btCalcular = document.getElementById("btCalcular");
+btCalcular.addEventListener("click" , figurinhas);
+
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
 
     <script src="figurinhacopa.js"></script>
-</body>
-</html>
 
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>

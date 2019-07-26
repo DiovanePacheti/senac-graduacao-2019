@@ -7,7 +7,7 @@ function verificaParImpar(){
     if(numero%2==0){
         outResposta.textContent = "O numero " + numero + " é Par ! ";
     }else{
-        outResposta.textContent = "O numero " + numero + "é Impar !";
+        outResposta.textContent = "O numero " + numero + " é Impar !";
     }
 }
 var btverificar = document.getElementById("btverificar");

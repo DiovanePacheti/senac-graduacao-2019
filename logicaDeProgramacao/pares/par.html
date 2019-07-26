@@ -14,7 +14,7 @@
    <section class=" bloco">
 
    <div class="container banner row">
-      <h1>Programa verifica Primo </h1>
+      <h1>Programa verifica Pares</h1>
       <div class=" col s12 center">
         <div class="card-img container ">
                     <img class="imagresponsiva" src="../../img/imgParnum.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
@@ -23,15 +23,48 @@
 
        <p><input class=" btn waves-effect waves-light" type="button" value="Verificar" id="btverificar"></p>
 
-       <h3 id="outResposta"></h3>
-
+       <h3>Pares :</h3>
+       <pre class="resposta" id="outResposta"></pre>         
     </div>
     </div>
     </section>
     <section class="linha">
             <h2 class="center">Código em JavaScript</h2>
             <pre class="fundo">
-
+                function verificaParImpar(){
+                        var inNumero = document.getElementById("inNumero");
+                        var outResposta = document.getElementById("outResposta");
+                    
+                        var numero = Number(inNumero.value);
+                        
+                        var qtdPares = 0;
+                    
+                        var pares = "";
+                    
+                        var somaPares = 0;
+                    
+                    
+                        for(var i = 1; i < numero ; i++){
+                    
+                           if(i%2==0){
+                              pares += i + ", ";
+                              qtdPares++;
+                              somaPares += i;
+                           }
+                              
+                           
+                        }//fim do for
+                        outResposta.textContent = "O numero " 
+                        + numero + "\nPares entre 1 e " + numero + " : " 
+                        + pares + "\nTem " + qtdPares 
+                        + " pares " + "\nSoma dos Pares : " + somaPares;
+                    
+                    }
+                    
+                    
+                    var btverificar = document.getElementById("btverificar");
+                    btverificar.addEventListener("click", verificaParImpar);
+                    
             </pre>
     </section>
     <section>
@@ -44,7 +77,7 @@
     </section>
 
 
-    <script src="primo.js"></script>
+    <script src="par.js"></script>
 
     <!-- Scripts e links javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>

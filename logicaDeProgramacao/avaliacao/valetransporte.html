@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="estilo.css" type="stelsheet/css"  >
-    <style>
-        img {
-        float: left;
-        width: 250px;
-        height: 250px;
-        margin-right: 10px;
-        }
+    <title>Farmácia Avenida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
 
-        h1 {
-        border-bottom-style: inset;
-        }
-    </style>
-    <title>Programa Vale-transporte</title>
 </head>
-<body>
-    <h1>Programa Vale-transporte</h1>
-    <img src="onibus.jpg" alt="imagem de um onibus">
-    <p>Valor R$ : <input type="text" id="inValor"></p>
-    <p><input type="button" value="Calcular" id="btCalcular"></p>
 
-    <h3 id="outqtdPass"></h3>
-    <h3 id="outtroco"></h3>
-    <script src="valetransporte.js"></script>
+<body>
+    <section class=" bloco">
+
+        <div class="container banner row">
+            <h1>Farmácia Avenida</h1>
+            <h2>Promoção: Desconto dos centavos</h2>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgFarmacia.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">Medicamento: <input type="text" id="inMedicamento"></p>
+                <p class="pergunta">preço R$: <input type="text" id="inPreco"></p>
+                <p><input class=" btn " type="button" value="ver promoção" id="btpromocao"></p>
+            </div>
+            <h2>subtitulo</h2>
+            <pre class="resposta" id="outpromocao"></pre>
+            <h3 id="outResposta"></h3>
+            <h3 id="outnotas"></h3>
+            <h3 id="outnotas"></h3>
+
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
+    <script src="farmaciaavenida.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>

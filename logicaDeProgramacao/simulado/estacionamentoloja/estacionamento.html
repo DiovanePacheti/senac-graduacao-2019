@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Estacionamento da Loja</title>
+    <title>Programa Estacionamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h2>Estacionamento da Loja</h2>
-    <img src="../../../img/imgestacionamentoloja.png" alt=" imagem exercicio estacionamento da loja " >
-    <p>Tempo(min): <input type="text" id="inTempo"></p>
+    <section class=" bloco">
 
-    <p><input type="button" value="Verificar Situaçâo" id="btEstacionamento"></p>
+        <div class="container banner row">
+            <h1>Estacionamento da Loja</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../../img/imgestacionamentoloja.png" alt="">
+                </div>
+                <p class="pergunta">Tempo(min) : <input type="text" id="inMedicamento"></p>
+                <p><input class=" btn " type="button" value="Verificar Situção" id="btEstacionamento"></p>
+            </div>
+            <h3 id="outPagar"></h3>
 
-    <h3 id="outPagar"></h3>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
 
     <script src="estacionamento.js"></script>
-</body>
-</html>
 
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
+</html>

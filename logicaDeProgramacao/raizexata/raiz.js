@@ -4,15 +4,21 @@ function calcular() {
     var numero = Number(inNumero.value);
 
     var raiz = Math.sqrt(numero);
-
-    var outRaiz = document.getElementById("outRaiz");
-    outRaiz.textContent = "Raiz : " + raiz.toFixed(4);
+    var raizSaida;
 
     if(raiz %1 != 0){
       resp = " não possui ";
+      raizSaida = raiz.toFixed(4);
+      
     }else{
       resp = " possui ";
+      raizSaida = Math.trunc(raiz) ;
+
     }
+
+    var outRaiz = document.getElementById("outRaiz");
+    outRaiz.textContent = "Raiz : " + raizSaida;
+
 
     var outResposta = document.getElementById("outResposta");
     outResposta.textContent = numero + resp + "rais exata !";

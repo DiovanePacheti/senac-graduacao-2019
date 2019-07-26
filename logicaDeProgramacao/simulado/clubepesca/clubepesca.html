@@ -1,22 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programa Clube de Pesca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h2>Programa: Clube de Pesca</h2>
-        <img src="../../../img/imgclubepesca.png" alt="" >
-        <p>N° de Pessoas: <input type="text" id="inPessoa"></p>
-        <p>N° de Peixes: <input type="text" id="inPeixes"></p>
-   
-        <p><input type="button" value="Calcular Pagto" id="btcalcularPagto"></p>
+    <section class=" bloco">
 
-        <h3 id="outPagar"></h3>
+        <div class="container banner row">
+            <h1>Clube de Pesca</h1>
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../../img/imgclubepesca.png" alt="">
+                </div>
+                <p class="pergunta">N° de Pessoas : <input type="text" id="inPessoa"></p>
+                <p class="pergunta">N° de Peixes : <input type="text" id="inPeixes"></p>
+                <p><input class=" btn " type="button" value="Calcular Pagamento" id="btcalcularPagto"></p>
+            </div>
+            <h3 id="outPagar"></h3>
 
-        <script src= "clubepesca.js"></script>
-    </body>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
+function pagto(){
+
+    var inPessoa = document.getElementById("inPessoa");
+    pessoa = Number(inPessoa.value);
+
+    var inPeixes = document.getElementById("inPeixes");
+    peixe = Number(inPeixes.value);
+    
+    var pagarPorPessoa = pessoa * 10;
+
+    var valorPeixe = 5;
+
+    //Utilizando o metodo Math.abs para retornar o valor positivo 
+    var peixeExtra = Math.abs(pessoa - peixe);
+    alert(peixeExtra);
+    if (peixeExtra > 0){
+        peixeExtra = peixeExtra * valorPeixe;
+    }
+    alert(peixeExtra);
+    var outPagar = document.getElementById("outPagar");
+    outPagar.textContent = "Pagar R$ : " + (peixeExtra + pagarPorPessoa).toFixed(2);
+
+}//fim da function
+var btcalcularPagto = document.getElementById("btcalcularPagto");
+btcalcularPagto.addEventListener("click", pagto);
+            
+	    </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
+
+
+	    </pre>
+    </section>
+
+
+    <script src="clubepesca.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
+</body>
+
 </html>
-

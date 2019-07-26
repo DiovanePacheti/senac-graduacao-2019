@@ -17,9 +17,9 @@
       <h1>Programa Filme Duração Minutos</h1>
       <div class=" col s12 center">
        <div class="card-img container ">
-                    <img class="imagresponsiva" src="../../img/imglenomeidade.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
+         <img class="imagresponsiva" src="../../img/imgfilmeduracao.jpg" alt="foto do quadro com o exercicio da farmacia avenida">
        </div>
-       <p class="pergunta">Digite um numero: <input type="text" id="inNumero"></p>
+       <p class="pergunta">Digite o tempo de duração : <input type="text" id="inNumero"></p>
 
        <p><input class=" btn waves-effect waves-light" type="button" value="Verificar" id="btverificar"></p>
 
@@ -29,10 +29,25 @@
     </div>
     </section>
     <section class="linha">
-            <h2 class="center">Código em JavaScript</h2>
-            <pre class="fundo">
-
-            </pre>
+      <h2 class="center">Código em JavaScript</h2>
+      <pre class="fundo">
+        function calculandoTempo(){
+          var inNumero = document.getElementById("inNumero");
+          var outResposta = document.getElementById("outResposta");
+        
+          var numero = Number(inNumero.value);
+        
+          var horas = Math.trunc(numero/60);
+        
+          var minutos = numero%60;
+        
+          outResposta.textContent = "filme dura " + horas 
+          + " horas " + minutos + " minutos"
+        }
+        var btverificar = document.getElementById("btverificar");
+        btverificar.addEventListener("click", calculandoTempo);
+                        
+      </pre>
     </section>
     <section>
             <h2 class="center">Código em Java</h2>
@@ -44,7 +59,7 @@
     </section>
 
 
-    <script src="primo.js"></script>
+    <script src="filme.js"></script>
 
     <!-- Scripts e links javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
