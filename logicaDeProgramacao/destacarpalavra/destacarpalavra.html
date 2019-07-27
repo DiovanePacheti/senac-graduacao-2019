@@ -1,25 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa Destacar Palavra</title>
+<meta charset="UTF-8">                                                                                                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">                                                                                         <title>Destacar Palavra</title>                                                                                                               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">                               <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../cssLogica/logica.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Programa Destacar Palavra</h1>
+    <section class=" bloco">
 
-    <img src="../../img/imgdestacar.png" alt="Numeros">
+        <div class="container banner row">
+            <h1>Destacar Palavra</h1>
+            
+            <div class=" col s12 center">
+                <div class="card-img container ">
+                    <img class="imagresponsiva" src="../../img/imgdestacar.png" alt="foto do quadro com o exercicio da farmacia avenida">
+                </div>
+                <p class="pergunta">Numero: <input type="text" id="inNumero"></p>
+                <p class="pergunta">Palavra: <input type="text" id="inPalavra"></p>
+                <p><input class=" btn " type="button" value="Exibir" id="btExibir"></p>
+            </div>
+	    <h3>subtitulo</h3>
+            <pre class="resposta" id="outResposta"></pre>
 
-    <p>Palavra :  <input type="text" id="inPalavra"></p>
+        </div>
+    </section>
+    <section class="linha">
+        <h2 class="center">Código em JavaScript</h2>
+        <pre class="fundo">
 
-    <p>Numero : <input type="text" id="inNumero"></p>
+            </pre>
+    </section>
+    <section>
+        <h2 class="center">Código em Java</h2>
+        <pre>
 
-    <p><input type="button" value="Exibir" id="btExibir"></p>
 
+            </pre>
+    </section>
 
-    <h3 id="outResposta"></h3>
 
     <script src="destacarpalavra.js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materia
+lize.min.js"></script>
 </body>
+
 </html>
+
