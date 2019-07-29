@@ -33,8 +33,14 @@
             font-family: 'Aldrich', sans-serif;
         }
         .construcaoCalculadora strong{
-            color:#4e342e;
-            background-color: #eceff1;
+            color:#dba615;
+            background-color: #7e726d;
+            border-radius: 2px;
+            padding:1px;
+        }
+        .tamanhoParagrafo{
+            font-size: 1.2em;
+            text-align: justify;
         }
         .borda-redonda{
             border-radius: 5px;
@@ -45,22 +51,22 @@
 <body>
     <section class="construcaoCalculadora bloco">
         <div class="row container">
-            <p>
-                <h1>Construindo Calculadora</h1>
+            <h1>Construindo Calculadora</h1>
+            <p class="tamanhoParagrafo">
                 Esta caluladora realiza algumas operações de conversão de base 
                 númerica, entre numeros <strong>Decimal</strong> , <strong>Binario</strong>, 
                 <strong>Octal</strong> e <strong>Hexadecimal</strong> 
             </p>
-            <p>
-                <h5>Convertendo de Decimal para Binario: </h5>
+            <h5>Convertendo de Decimal para Binario: </h5>
+            <p class="tamanhoParagrafo">
+                
                 Para convertemos numeros <strong>decimal</strong> para <strong>binario</strong> dividimos este numero
                 pela base numerica que queremos converter neste caso queremos 
                 converter para ha base <strong>dois(2)</strong>.<br/>
-                Vamos supor que queremos converter o numero <strong>13</strong>
+                Vamos supor que queremos converter o numero <strong>decimal 13 na base 10 (13)<sub>10</sub></strong>
                 para um numero binario vamos dividir ele por <strong>2</strong> 
             </p>
-            <p>
-                <pre class="borda-redonda">
+            <pre class="borda-redonda">
                 Decimal -> binario
 
                     13|_2_
@@ -68,14 +74,15 @@
                         0   3 |_2_
                             1   1 |_2_
                                 1   0  
-                </pre>
-            </p>
-            <p>
-                Pegamos os ng<strong>restos</strong> dessa <strong>divisão</strong>
+            </pre>
+            <p class="tamanhoParagrafo">
+                Pegamos os <strong>restos</strong> dessa <strong>divisão</strong>
                  no <strong>sentido</strong> de <strong>baixo</strong> para <strong>cima</strong> 
                 formando numero <strong>binario 1101 na base 2 (1101)<sub>2</sub></strong>
             </p>
+
         </div>
+
         <div class="row container">
             
         </div>
