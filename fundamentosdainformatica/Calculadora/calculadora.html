@@ -54,15 +54,15 @@
             <h1>Construindo Calculadora</h1>
             <p class="tamanhoParagrafo">
                 Esta caluladora realiza algumas operações de conversão de base 
-                númerica, entre numeros <strong>Decimal</strong> , <strong>Binario</strong>, 
+                númerica, entre numeros <strong>Decimal</strong>, <strong>Binario</strong>, 
                 <strong>Octal</strong> e <strong>Hexadecimal</strong> 
             </p>
             <p><h5>Convertendo de Decimal para Binario: </h5></p>
             <p class="tamanhoParagrafo">
                 
-                Para convertemos numeros <strong>decimal</strong> para <strong>binario</strong> dividimos este numero
+                Para convertemos um numero <strong>decimal</strong> para <strong>binario</strong> dividindo este numero
                 pela base numerica que queremos converter neste caso queremos 
-                converter para ha base <strong>dois(2)</strong>.<br/>
+                converter para ha base <strong>dois (2)</strong>.<br/>
                 Vamos supor que queremos converter o numero <strong>decimal 13 na base 10 (13)<sub>10</sub></strong>
                 para um numero binario vamos dividir ele por <strong>2</strong> 
             </p>
@@ -77,22 +77,121 @@
             </pre>
             <p class="tamanhoParagrafo">
                 Pegamos os <strong>restos</strong> dessa <strong>divisão</strong>
-                 no <strong>sentido</strong> de <strong>baixo</strong> para <strong>cima</strong> 
+                no <strong>sentido</strong> de <strong>baixo</strong> para <strong>cima</strong> 
                 formando numero <strong>binario 1101 na base 2 (1101)<sub>2</sub></strong>
+
             </p>
+            <p><h5>Construindo o algoritmo</h5></p>
+            <p class="tamanhoParagrafo">
+
+            </p>
+            <pre class="borda-redonda">
+                <code>
+//Criando a função decimal para binario
+
+function binario(){
+
+    //variavel obtendo valor digitado
+
+    var valor = Number(coletor);
+
+    /*variavel que ira concatenar o 
+    resto da divisao do numero ate zerar*/
+
+    var numeroBinario = "";
+
+    /**
+     * utilizando a estrutura repita um loop
+     * do/while ate o resultado da diviso ser 
+     * zero e terminar a divisao com um break
+     */
+    do{
+        numeroBinario += valor%2
+        divisao = Math.trunc(valor/2);
+        novovalor = divisao
+        valor = novovalor
+        
+
+        if(valor == 0){
+            break;
+        }
+
+    }while(true);       
+
+    /*variavel que vai inverter a string numeroBinario 
+        para acertar a saida para o sequencia correta
+    */
+
+    var numeroBinarioAjustado ="";
+
+    for(var i = numeroBinario.length; i>=0;i--){
+        
+        numeroBinarioAjustado += numeroBinario.charAt(i);
+    }
+     outpromocao.textContent = numeroBinarioAjustado;    
+    
+}//fim da função binario para 
+                </code>
+            </pre>
             <p><h5>Convertendo de Binario para Decimal: </h5></p>
             <p class="tamanhoParagrafo">
-                Para convertermos um numero de <strong>binario</strong> para decimal precisamos 
-                multiplicar os numeros por <strong>2</strong>.
-                Vamos super que queremos converter o numero <strong>binario 1101</strong> para
+                Para convertermos um numero de <strong>binario</strong> para decimal 
+                precisamos multiplicar os numeros por <strong>2</strong>.
+                Vamos super que queremos converter o numero 
+                <strong>binario 1101</strong> para
                 <strong>decimal</strong>.
 
             </p>
             <pre class="borda-redonda"> 
                 1         1           0          1
                 
-                1x2    +  1x2     +   0x2     +  1x2
+                1x2       1x2         0x2        1x2
+            </pre>
+            <p>
+                depois adicionamos <strong>potências</strong> aos numeros 2 de forma 
+                crescente da direita para esquerda<br/><strong>1x2<sup>3</sup>  1x2<sup>2</sup>  0x2<sup>1</sup>  1x2<sup>0</sup></strong>
+            </p>
+            <pre class="borda-redonda">    
                 1X(2)3 +  1X(2)2  +   0X(2)1  +  1X(2)0
+            </pre>
+            <p>
+                Em seguida resolvemos estas <strong>potências</strong> 
+            </p>
+            <pre class="borda-redonda"> 
+                1         1           0          1
+                
+                1x2       1x2         0x2        1x2
+
+                1X(2)3    1X(2)2      0X(2)1     1X(2)0
+
+                1X8       1X4         0X2        1X1
+            </pre>
+            <p>
+                Logo após multiplicamos os resultados destas <strong>potências</strong>
+                com os valores dos numero binario 
+            </p>
+            <pre class="borda-redonda"> 
+
+                1X8       1X4         0X2        1X1
+
+                8         4           0          1
+            </pre>
+            <p>
+                Por fim somamos estes valores obtidos assim convertendo-os em um valor 
+                <strong>decimal</strong>
+            </p>
+            <pre class="borda-redonda"> 
+               (1         1           0          1) -> Numero Binario
+                
+                1x2       1x2         0x2        1x2
+
+                1X(2)3    1X(2)2      0X(2)1     1X(2)0
+
+                1X8       1X4         0X2        1X1
+
+                8         4           0          1
+
+               (13) -> Numero Decimal
             </pre>
         </div>
 
