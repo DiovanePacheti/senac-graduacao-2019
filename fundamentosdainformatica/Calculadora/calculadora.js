@@ -1,11 +1,15 @@
 
-var outpromocao = document.getElementById("outpromocao");
+/**variavel global que vai retornar a saida dos 
+ * numeros no display da calculadora */
+var outSaidaDisplay = document.getElementById("outSaidaDisplay");
+
 var coletor = ""//variavel que vai concatenar a string para enviar as funçoes
+
 function botao0() {
     var btZero = document.getElementById("btZero");
     var zero = btZero.value;
     coletor += btZero.value;
-    outpromocao.textContent += zero;
+    outSaidaDisplay.textContent += zero;
 
 }
 
@@ -13,7 +17,7 @@ function botao1() {
     var btNove = document.getElementById("btUm");
     var nove = btNove.value;
     coletor += btNove.value;
-    outpromocao.textContent += nove;
+    outSaidaDisplay.textContent += nove;
 
 }
 
@@ -21,7 +25,7 @@ function botao2() {
     var btDios = document.getElementById("btDois");
     var dois = btDois.value;
     coletor += btDois.value;
-    outpromocao.textContent += dois;
+    outSaidaDisplay.textContent += dois;
 
 }
 
@@ -29,7 +33,7 @@ function botao3() {
     var btTres = document.getElementById("btTres");
     var tres = btTres.value;
     coletor += btTres.value;
-    outpromocao.textContent += tres;
+    outSaidaDisplay.textContent += tres;
 
 }
 
@@ -38,7 +42,7 @@ function botao4() {
     var btQuatro = document.getElementById("btQuatro");
     var quatro = btQuatro.value;
     coletor += btQuatro.value;
-    outpromocao.textContent += quatro;
+    outSaidaDisplay.textContent += quatro;
 
 }
 
@@ -46,37 +50,66 @@ function  botao5() {
     var btCinco = document.getElementById("btCinco");
     var cinco = btCinco.value;
     coletor += btCinco.value;
-    outpromocao.textContent += cinco;
+    outSaidaDisplay.textContent += cinco;
 }	
 
 function  botao6() { 
     var btSeis = document.getElementById("btSeis");
     var seis = btSeis.value;
     coletor += btSeis.value;
-    outpromocao.textContent += seis;
+    outSaidaDisplay.textContent += seis;
 }	
 
 function  botao7() { 
     var btSete = document.getElementById("btSete");
     var sete = btSete.value;
     coletor += btSete.value;
-    outpromocao.textContent += sete;
+    outSaidaDisplay.textContent += sete;
 }
 
 function  botao8() {
     var btOito = document.getElementById("btOito");
     var oito = btOito.value;
     coletor += btOito.value;
-    outpromocao.textContent += oito;
+    outSaidaDisplay.textContent += oito;
 }
 
 function botao9() {
     var btNove = document.getElementById("btNove");
     var nove = btNove.value;
     coletor += btNove.value;
-    outpromocao.textContent += nove;
+    outSaidaDisplay.textContent += nove;
 
 }	
+
+function botaoC(){
+    var btLimpa = document.getElementById("btLimpa");
+    coletor = " ";
+    outSaidaDisplay.textContent = " ";
+}
+
+//variavel global que controla aletra hexadecimal
+var contPosicao = 0;
+
+function botaoHexa(){
+    
+    contPosicao++;
+    
+    //var btHexadecimal = document.getElementById("btHexadecimal");
+
+    //string que vai ser percorrida
+    var letrasHexadecimal = "ABCDEF";
+
+    if(contPosicao = 0){
+        coletor += letrasHexadecimal.charAt(contPosicao);
+        outSaidaDisplay.textContent = coletor;
+    }else if(contPosicao >= 1){
+        coletor = coletor.substr(coletor.length -1);
+        coletor += letrasHexadecimal.charAt(contPosicao);
+        outSaidaDisplay.textContent = coletor;
+    }
+
+}
 
 // fim das funções que capturam os valoes dos numeros
 
@@ -111,7 +144,7 @@ function decimal(){
     }
     
     // retornando o resultado 
-    outpromocao.textContent = numeroDecimal;
+    outSaidaDisplay.textContent = numeroDecimal;
 
 }//fim da função convertendo binario para decimal
 
@@ -148,7 +181,7 @@ function binario(){
         
         numeroBinarioAjustado += numeroBinario.charAt(i);
     }
-     outpromocao.textContent = numeroBinarioAjustado;    
+    outSaidaDisplay.textContent = numeroBinarioAjustado;    
     
 }//fim da função binario para 
 
@@ -191,7 +224,7 @@ function octal(){
     }
     
     // retornando o resultado 
-    outpromocao.textContent = numeroDecimal;
+    outSaidaDisplay.textContent = numeroDecimal;
 
 }//fim da função convertendo binario para decimal
 
@@ -228,7 +261,7 @@ function DeOctal(){
         
         numeroOctalAjustado += numeroOctal.charAt(i);
     }
-     outpromocao.textContent = numeroOctalAjustado;    
+    outSaidaDisplay.textContent = numeroOctalAjustado;    
     
 }//fim da função binario para 
 
@@ -271,6 +304,6 @@ function hexadecimall(){
     }
     
     // retornando o resultado 
-    outpromocao.textContent = numeroDecimal;
+    outSaidaDisplay.textContent = numeroDecimal;
 
 }//fim da função convertendo binario para decimal

@@ -25,8 +25,10 @@
                 font-size:8px;
                 margin:1px 1px 1px 3px;
         }      
-        .btTam{width:33%; 
-               height:80px;
+        .btTam{width:23%; 
+               height:65px;
+        }
+        #btHexadecimal{
         }
         textarea.materialize-textarea{
             font-size:1.5em; 
@@ -201,7 +203,7 @@ function binario(){
     </section><!-- fim da section construção de calculadora-->
     <section class=" bloco ">
         
-                <p class="visor linhaCal row " > <textarea id="outpromocao" class="materialize-textarea"></textarea></p>
+                <p class="visor linhaCal row " > <textarea id="outSaidaDisplay" class="materialize-textarea"></textarea></p>
                 <p class="linhaCal row ">
                     <input class=" btTamOperacoes btn col 2 " type="button" value="bin/dec" id="btDec" onclick="decimal();">
                     <input class=" btTamOperacoes btn col 2 " type="button" value="dec/bin" id="btBin" onclick="binario();">
@@ -210,25 +212,28 @@ function binario(){
                 </p>
                    
                 <p class="linhaCal row ">
-                    <input class=" btTam btn col 4 " type="button" value="1" id="btUm" onclick="botao1();">	
-                    <input class=" btTam btn col 4 " type="button" value="2" id="btDois" onclick="botao2();">
-                    <input class=" btTam btn col 4 " type="button" value="3" id="btTres" onclick="botao3();">
+                    <input class=" btTam btn col 2 " type="button" value="1" id="btUm" onclick="botao1();">	
+                    <input class=" btTam btn col 2 " type="button" value="2" id="btDois" onclick="botao2();">
+                    <input class=" btTam btn col 2 " type="button" value="3" id="btTres" onclick="botao3();">
+                    <input class=" btTam btn col 2 " type="button" value="C" id="btLimpa" onclick="botaoC();">
+                </p>
+                <p class="linhaCal  row">
+                    <input class=" btTam btn col 2 " type="button" value="4" id="btQuatro" onclick="botao4();">
+                    <input class=" btTam btn col 2 " type="button" value="5" id="btCinco" onclick="botao5();">
+                    <input class=" btTam btn col 2 " type="button" value="6" id="btSeis" onclick="botao6();">
+                    <input class=" btTam btn col 2 " type="button" value="H" id="btHexadecimal" onclick="botaoHexa();">
+                </p>
+                <p class="linhaCal row ">
+                    <input class=" btTam btn col 2 " type="button" value="7" id="btSete" onclick="botao7();">
+                    <input class=" btTam btn col 2 " type="button" value="8" id="btOito" onclick="botao8();">
+                    <input class=" btTam btn col 2 " type="button" value="9" id="btNove" onclick="botao9();">
                 </p>
                 <p class="linhaCal row">
-                    <input class=" btTam btn col 4 " type="button" value="4" id="btQuatro" onclick="botao4();">
-                    <input class=" btTam btn col 4 " type="button" value="5" id="btCinco" onclick="botao5();">
-                    <input class=" btTam btn col 4 " type="button" value="6" id="btSeis" onclick="botao6();">
+                    <input class=" btTam btn col 2 " type="button" value="0" id="btZero" onclick="botao0();">
+                    <input class=" btTam btn col 2 " type="button" value=" . " id="btnadaa">
+                    <input class=" btTam btn col 2 " type="button" value=" , " id="btnada">
                 </p>
-                <p class="linhaCal row">
-                    <input class=" btTam btn col 4 " type="button" value="7" id="btSete" onclick="botao7();">
-                    <input class=" btTam btn col 4 " type="button" value="8" id="btOito" onclick="botao8();">
-                    <input class=" btTam btn col 4 " type="button" value="9" id="btNove" onclick="botao9();">
-                </p>
-                <p class="linhaCal row">
-                    <input class=" btTam btn col 4 " type="button" value="0" id="btZero" onclick="botao0();">
-                    <input class=" btTam btn col 4 " type="button" value=" . " id="btnadaa">
-                    <input class=" btTam btn col 4 " type="button" value=" , " id="btnada">
-                </p>
+                
         
     </section>
     <section class="linha">
