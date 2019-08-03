@@ -62,7 +62,7 @@ function  botao6() {
 
 function  botao7() { 
     var btSete = document.getElementById("btSete");
-    var sete = btSete.value;
+    var sete = btSete.value;  
     coletor += btSete.value;
     outSaidaDisplay.textContent += sete;
 }
