@@ -93,7 +93,13 @@ p {
 .btnContinue{
 	margin:3px auto ;
 }
-.imgLogo{ margin-top:150px;
+.imgLogo{ margin-top:150px;}
+
+/* cor do links da section java */
+.linksJava a{
+  color: #fff;
+}
+
 /*MEDIA*/
 @media only screen and(max-width: 480px){
 h2{ font-size: 1rem;}
