@@ -25,4 +25,13 @@ span{ color:#4e342e;}
 /*criando espaçamento entre os botoes */
 .botaoEspaços{ margin-left: 5%;}
 
+/* tarefa criar um template do restaurante */
+.botaolevaaotrabalho{
+  margin: 5% auto ;
+}
+.botaolevaaotrabalho, a{
+  text-align: center;
+}
+
+
 

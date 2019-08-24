@@ -133,7 +133,7 @@ function decimal(){
     /*vetor de potencia que ira ser somado as potencias que 
       corresponderem aos valor um da string inputada  
     */
-    var potencia = [1 , 2 , 4, 8, 16, 32];
+    var potencia = [1 , 2 , 4, 8, 16, 32, 64, 128, 256, 512, 1024];
 
     for(var i = valor.length-1; i >= 0; i--){
             //condicional que ira verificar se deve ser somado o valor

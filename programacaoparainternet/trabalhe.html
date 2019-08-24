@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revenda Avenida - Trabalhe conosco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../logicaDeProgramacao/cssLogica/logica.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="revendaavenida.css">
+</head>
+<body>
+    <!-- Menu de navegação-->
+    <nav>
+
+        <ul>
+            <li><a href="revendaavenida.html">Principal</a></li>
+            <li><a href="promocoes.html">Veículos em Promação </a></li>
+            <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+        </ul>
+
+    </nav>
+    <!-- cabeçalho da pagina de conteudo do site-->
+    <header>
+        <h1>Revenda Avenida - Veículos Novos e Usados</h1>
+    </header>
+    <!--  -->
+    <article>
+        <h2>Trabalhe Conosco</h2>
+         <fieldset>
+             <legend>Preencha todas as informações cadastrais</legend>
+             <form action="post">
+                 <p>
+                     <label for="nome">Nome:</label>
+                     <input type="text" id="inNome" autofocus required>
+                 </p>
+                 <p>
+                     <label for="email">E-mail:</label>
+                     <input type="email" id="inEmail" required>
+                 </p>
+                 <p>
+                     <label for="senha">Senha:</label>
+                     <input type="password" id="inSenha" required>
+                 </p>
+                 <p>
+                    <label for="turno">Turno</label>
+                    <select id="inTurno">
+                        <option value="m">Manhã</option>
+                        <option value="n">Noite</option>
+                    </select>
+                  <p>
+                      <input type="submit" value="Enviar">
+                      <input type="reset" value="Limpar">
+                  </p>  
+                 
+                </p>
+             </form>
+         </fieldset>
+    </article>
+    <!-- -->
+    <!-- Rodape do arquivo  -->
+    <footer>
+        <p><i>Revenda Avenida - Rua Anchieta, 720 - Pelotas - RS</i></p>
+    </footer>
+    
+    <script src=".js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Programa Aposentadoria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../../logicaDeProgramacao/cssLogica/logica.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class=" bloco">
+
+    <div class="container banner row">
+      <h1>Aula 02 - 16/08/2019</h1>
+      <div class=" col s12 center">
+
+        <p>
+            Utilizando saida de dados com <strong>print, println </strong> e <strong>printf</strong>
+            variaveis do tipo primivo e instanciamento das classe Scanner para entra de dados do usuario 
+            e tambem formatação de saida dos dados com <strong>%s</strong> = <strong>String</strong>, 
+            <strong>%d</strong> = <strong>int</strong> e <strong>%f</strong> = <strong>double - float</strong>
+            e <strong>%.2f</strong>  
+        </p>
+    </div>
+  </section>
+  <section>
+    <h2 class="center">Código em Java Aula dia 16/08/2019</h2>
+    <pre>
+        package br.com.senacrs;
+
+//import javax.swing.*;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        String nome = " ";
+        int idade = 0;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Ola, Diovane ");
+
+        // Saida de dados para notificar erro
+        System.err.println("Erro!");
+
+        /**
+         *  Saida de dados com uma janela grafica
+         *  JOptionPane.showMessageDialog(null, "Oi Diovane");
+        */
+
+        // imprimindo messagem de pergunta do nome do usuario
+        System.out.print("Digite seu nome ? ");
+        nome = scan.nextLine();
+
+        System.out.println("Seja bem vindo " + nome);
+
+        double x = 1.0/3.0;
+        System.out.println(x);
+
+        /**
+         * utilizando a saida de dados printf que usa % para reservar espaço na estring para
+         * inserir variaveis
+         * imprimindo dados com printf
+         * %s - String
+         * %f - double, float
+         * %2f - o valor 2 indica o numero de casas decimais depois da virgula
+         * %d - int
+         */
+        System.out.printf("Ola,%s, Seu ACB é: %.2f\n",nome,x);
+
+        System.out.print("Qual e sua idade : ");
+        idade = scan.nextInt();
+
+        System.out.printf("%s, sua idade é %d",nome,idade );
+
+    }//fim do method
+
+}//fim da class aula02
+
+
+    </pre>
+  </section>
+  <script src="aposentadoria.js"></script>
+
+  <!-- Scripts e links javaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

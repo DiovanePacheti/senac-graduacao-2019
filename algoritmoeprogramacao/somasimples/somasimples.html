@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Programa Soma Simples </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../../logicaDeProgramacao/cssLogica/logica.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class=" bloco">
+
+    <div class="container banner row">
+      <h1>Programa Soma Simples</h1>
+      <div class=" col s12 center">
+
+
+        <div class="card-img container ">
+          <img class="imagresponsiva" src="../img/img_somasimples.png"
+            alt="">
+        </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="center">Código em Java URI</h2>
+    <pre>
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        
+        int valorA = 0;
+        int valorB = 0;
+        int soma = 0;
+        
+        //System.out.println("Digite o valor da variavel A : ");
+        valorA = scan.nextInt();
+        
+        //System.out.println("Digite o valor da variavel B : ");
+        valorB = scan.nextInt();
+        
+        soma = valorA + valorB;
+        
+        System.out.println("SOMA = " + soma);
+
+    }//fim do method main
+    
+}//fim da class
+
+    </pre>
+    <div class="card-img container ">
+      <img class="imagresponsiva" src="../img/img_exercicio1003_somasimples_tempodeexcucao.png" alt="print do tempo de execucao">
+    </div>
+  </section>
+  <script src="aposentadoria.js"></script>
+
+  <!-- Scripts e links javaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

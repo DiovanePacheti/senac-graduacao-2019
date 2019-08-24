@@ -1,0 +1,56 @@
+nav{ background-color: transparent ;}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a{
+    padding:  10px;
+    display: inline-block;
+    
+    color: #333;
+    text-decoration: none;
+    border-bottom: 3px solid #ededed;
+
+}
+
+/* hover : quando o usuario passa o mouse sobre o item */
+nav ul li a:hover{
+    background-color: #d6d6d6;
+    color: #d6d6d6;
+    border-bottom: 3px solid #f00;
+}
+
+article h2{
+    color: #f00;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+img{
+    float: left;
+    margin: 0 10px;
+}
+
+table{
+width: 80;
+}
+th, td{
+    padding: 10px;
+}
+
+thead tr{
+    border-bottom: solid 3px #f00
+}
+tbody tr:hover{
+    background-color: #333;
+}
+tfoot{
+    background-color: #333;
+    color: beige;
+    font-style: italic;
+    font-weight: bold;
+
+}
+

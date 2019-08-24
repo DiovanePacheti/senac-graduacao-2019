@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programação para Internet I</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="img/icone.png">
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
+  <link rel="stylesheet" type="text/css" href="../logicaDeProgramacao/cssLogica/logica.css">  
+    <style>
+        .tabelarestaurante thead th{
+            color:rgb(199, 120, 55);
+        }
+        .contato{
+            background-color: rgb(68, 41, 26);
+            padding:110px;
+        }
+        .contato h2{
+            color: rgb(184, 172, 70);
+        }
+
+        .saudacao{
+            background-color: rgba(0, 0, 0,58%);
+            border-radius: 5px;
+            width: 70%;
+            padding: 10px;
+            margin-top: 90px;
+        }
+        .saudacao h2, p{
+            color: rgb(241, 239, 239);
+        }
+        /* Menu */
+        .menurestaurante{
+            background-color: rgba(77, 47, 14, 0.58);
+        }
+        .tabela{
+            padding-top:62px;
+        }
+        .titulocardapio{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do conteudo -->
+    <header id="home">
+            <div class=" navbar-fixed">                                 
+                    <nav class="navbar z-depth-0 menurestaurante">    
+                        <div class="nav-wrapper container">
+                            <div class="logorestaurante">
+                                <h1 class="logo_text">Restaurante</h1>
+                            </div>
+                            <!--Criando o menu-->
+                            <ul class="right light hide-on-med-and-down ">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#cardapio">Cardapio</a></li>
+                                <li><a href="#contato">Contato</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+        </div>
+    </header >
+    <section class="homerestaurante blocorestaurante">
+        <div class="container saudacao">
+            <h2>Restaurante Avenida</h2>
+            <p class="">
+                Lorem, ipsum dolor sit amet 
+                consectetur adipisicing elit. 
+                Quo velit at sint molestiae recusandae. 
+                Esse nihil aliquam dignissimos ipsa,
+                consequuntur minima deserunt iusto magnam 
+                atque magni totam natus dolorum quisquam.
+            </p>
+        </div>
+    </section>
+    <section class="tabela" id="cardapio">
+        <div class="container">
+            <h2 class="titulocardapio">Cardápio</h2>
+            <table class="tabelarestaurante">
+                <thead>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </thead>
+                <tr>
+                    <td>pratoum</td>
+                    <td>R$ 78,99</td>
+                </tr>
+                <tr>
+                    <td>pratodois</td>
+                    <td>R$ 123,99</td>
+                </tr>
+                <tr>
+                    <td>pratoum</td>
+                    <td>R$ 78,99</td>
+                </tr>
+                <tr>
+                    <td>pratodois</td>
+                    <td>R$ 123,99</td>
+                </tr>
+                <tr>
+                    <td>pratoum</td>
+                    <td>R$ 78,99</td>
+                </tr>
+                <tr>
+                    <td>pratodois</td>
+                    <td>R$ 123,99</td>
+                </tr>
+                <tr>
+                    <td>pratoum</td>
+                    <td>R$ 78,99</td>
+                </tr>
+                <tr>
+                    <td>pratodois</td>
+                    <td>R$ 123,99</td>
+                </tr>    
+            </table>
+        </div>
+    </section>
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2>Contatos de Reservas</h2>
+            <form action="" method="post">
+                
+                    <p>
+                        <label for="inNome">Nome</label>
+                        <input type="text" id="inNome"  required>
+                    </p>
+                    <p>
+                        <label for="inNome">E-mail</label>
+                        <input type="email" id="inEmail" required>
+                    </p>
+
+                
+            </form>
+        </div>
+    </section>
+   
+
+    <script src=".js"></script>
+
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        //inicializando o section scrollspy
+			document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.scrollspy');
+    var instances = M.ScrollSpy.init(elems, options);
+  });
+  
+    $(window).on("scroll", function(){
+	    if($(window).scrollTop() > 14){
+               $(".navbar").addClass("nav-color");	
+	    }else{
+	       $(".navbar").removeClass("nav-color");
+	    }	    
+    });	  
+  
+
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });	
+
+    </script>
+</body>
+</html>

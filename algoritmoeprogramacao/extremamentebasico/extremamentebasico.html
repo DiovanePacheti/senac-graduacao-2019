@@ -8,7 +8,7 @@
   <title>Programa Aposentadoria</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../cssLogica/logica.css" rel="stylesheet">
+  <link href="../../logicaDeProgramacao/cssLogica/logica.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,88 +25,62 @@
             alt="foto do exercicio de aposentadoria no quadro">
         </div>
 
-        <p class="texto">Tempo de contribuição : <input type="text" id="inContribuicao"></p>
-        <p>Idade : <input type="text" id="inIdade"></p>
-        <p><input class="btn waves-effect waves-light" type="button" value="verificar" id="btVerificar"></p>
-      </div>
-      <h3 id="outVerificar"></h3>
-
     </div>
   </section>
 
-  <section class="linha" id="codigoJavaScript">
-    <h2 class="center">Código em JavaScript</h2>
-    <pre class="fundo " id="aposentadoria">
-        function verificarAposentadoria(){
-
-          var inContribuicao = document.getElementById("inContribuicao");
-          var contribuicao = Number(inContribuicao.value);
-      
-          var inIdade = document.getElementById("inIdade");
-          var idade = Number(inIdade.value);
-      
-          var faltaIdade;
-          var faltaContribuicao;
-          var saida;
-      
-          if(idade >= 60 && contribuicao >= 30){
-      
-              saida = "Pode se aposentar ! ";
-          }else{
-              faltaIdade = 60 - idade;
-        faltaContribuicao = 30 - contribuicao;
-      
-        if(faltaIdade > faltaContribuicao){
-          saida = "Faltam " + faltaIdade + " anos pra aposentadoria por idade ";
-        }else{
-          saida = "Faltam " + faltaContribuicao + " anos de tempo de 
-          contribuição para aposentadoria";
-        }
-      
-          }
-      
-          var outVerificar = document.getElementById("outVerificar");
-          outVerificar.textContent = saida;
-      
-      }//fim da function
-      var btVerificar = document.getElementById("btVerificar");
-      btVerificar.addEventListener("click", verificarAposentadoria);
-      
-        </pre>
-  </section>
   <section>
-    <h2 class="center">Código em Java</h2>
+    <h2 class="center">Código em Java URI</h2>
     <pre>
-
-        import java.util.Scanner;
-public class Main {
-
-    public static void main(String[] args) {
-	// write your code here
-
-        //instanciando um objeto da classe Scannner
-        Scanner scan = new Scanner(System.in);
-
-         int valorA = 0 ;
-         int valorB = 0 ;
-         int valorX = 0 ;
-
-        //System.out.print("Digite o valor da variavel A : ");
-        valorA =  scan.nextInt();
-
-        // System.out.print("Digite o valor da variavel B : ");
-        valorB =  scan.nextInt();
-
-        //somando os valores de A e B e inserindo na variavel X
-        valorX = valorA + valorB;
-
-        System.out.println("X = " + valorX);
-
-
-    }//fim do method main
-}//fim da class
-
-        </pre>
+      import java.text.DecimalFormat;
+      import java.text.DecimalFormatSymbols;
+      import java.text.NumberFormat;
+      import java.util.Locale;
+      import java.util.Scanner;
+      public class Main {
+      
+          /**
+           * @param args the command line arguments
+           */
+          public static void main(String[] args) {
+      
+              
+              int numeroFuncionario = 0;
+              int qtdHorasTrabalhadas = 0;
+              double valorHora = 0;
+              double salario = 0;
+              String padrao = "##,####.00";
+              
+              Scanner scan = new Scanner(System.in);
+              DecimalFormat df = new DecimalFormat(padrao);
+              
+              //instanciando um objeto da Classe DecimaFormatSymbols para alterar o separador de casa decimal
+              DecimalFormatSymbols formatandoSimbolo = new DecimalFormatSymbols(new Locale("pt", "Brazil"));
+              formatandoSimbolo.setDecimalSeparator('.');
+              formatandoSimbolo.setGroupingSeparator(',');
+      
+              //System.out.println("Digite o numero de identificação : ");
+              numeroFuncionario = scan.nextInt();
+              
+              //System.out.println("Digite a quatidade de horas trabalhadas : ");
+              qtdHorasTrabalhadas = scan.nextInt();
+              
+              //System.out.println("Digite a nota C do aluno : ");
+              valorHora = scan.nextDouble();
+              
+              //System.out.println("Digite a nota D do aluno : ");
+              salario = qtdHorasTrabalhadas * valorHora;
+              
+              System.out.println("NUMBER = "+ numeroFuncionario + "\nSALARY = U$ " + df.format(salario));
+      
+          }//fim do method main
+          
+      }//fim da class
+      
+ 
+    </pre>
+    <div class="card-img container ">
+      <img class="imagresponsiva" src="../img/img_exercicio1008_salario_tempodeexcucao.png" alt="print do tempo de execucao">
+    </div>
   </section>
   <script src="aposentadoria.js"></script>
 
