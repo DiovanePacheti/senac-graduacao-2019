@@ -1,0 +1,60 @@
+/* ========= Container ===========*/
+.container{
+    background-color: #ccc;
+    height: 200px;
+    /*definindo um display flex*/
+    display: flex;
+    /*definindo a direção dos itens em linha */
+    flex-direction: row;
+    /*definindo a direção em coluna 
+      flex-direction: column;
+      definindo a direção dos itens aureverso na linha
+      felx-direction: row-reverse;
+      definindo direção em coluna invertida
+      flex-direction: column-reverse;
+    */
+    /*Define se os elementos terao quebra de linha*/
+    flex-wrap: nowrap; /* wrap - wrap-reverse*/
+
+    /*Define a direção(flex-direction) e quebrade linha(flex-wrap)
+    flex-flow: row wrap-reverse */
+
+    /* define o alinhamento na horizontal
+    justify-content:
+    valor padrão de e o flex-star da esqueda para direita.
+    justify-content: flex-start;
+    center: alinhar centro 
+    justify-content: center;
+    alinhar da direita pra esqueda
+    justify-content: end;
+    space-beetween define epaçamento entre os itens
+    justify-content: space-between;
+    space-arond define estapamento por igual entre os items e as bordas do display
+    justify-content: space-around;
+    */
+
+    justify-content: flex-start;
+    
+    /*define o alinhamento na vertical
+    align-items: 
+    define o padrão ocupando o tamanho total do container na vertial
+    align-items: stretch;
+    define alinhado ao centro da pagina 
+    align-items: center;
+    define alinhado no topo do container
+    align-items: flex-start;
+    define alinhamento na base do container 
+    align-items: flex-end;
+    define a posibilidade de um elemento ser alterado separadamente por uma class 
+    align-items: baseline;
+    ex: 
+    */
+}
+.item{
+    background-color: #333;
+    color: #fff;
+    padding :20px;
+    margin:5px;
+    width: 20%;
+    
+}
