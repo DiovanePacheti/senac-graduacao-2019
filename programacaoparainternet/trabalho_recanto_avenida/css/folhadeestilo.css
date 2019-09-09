@@ -6,7 +6,7 @@
     padding: 0;
     border: none;
     text-decoration: none;
-    color: #000;
+    color: rgb(15, 11, 11);
     font-size: 100%;
     outline:none;
     font-weight: 300;
@@ -60,7 +60,7 @@ header nav ul li:last-child{margin-right: 0;}
 /*alterando h1 da pagina principal*/
 
 .saudacao div h1{ font-size: 3.2rem; margin-top: 15px;}
-.saudacao div p{ font-size: 2rem; margin: 15px 0 35px 0;}
+.saudacao div p{ font-size: 2rem; margin: 15px 0 35px 0;color: #fff;}
 .saudacao div a{ margin-top: 15px auto;}
 .saudacao div a.btn{ background-color: rgb(116, 56, 56); border-radius: 4px; padding: 20px 50px;}
 .saudacao div h1,p,a {text-align: center;color:#fff;}
@@ -81,16 +81,21 @@ header nav ul li:last-child{margin-right: 0;}
 .destaque article .div02, .div03{ flex-grow:2; align-items: center;padding:13px 3px ;}
 .destaque article .div01{ flex-grow:20;}
 .destaque article>div:first-child{background-image: url(../img/img_quarto_destaque_promocao_do_mes.jpg);background-size: cover;}
-.destaque article div  h3, p{color: rgb(36, 36, 36);}
-.ancoraServicoFree{border:1px solid rgb(155, 75, 75);font-size:0.6em;padding:10px;color: rgb(36, 36, 36); margin: 8px 0;}
-.detalhes{ background-color:  rgb(36, 36, 36); color:#fff; padding:12px 35px; margin-top: 3px}
+.destaque article div  h2, p{color: rgb(36, 36, 36);}
+.ancoraServicoFree{border:1px solid rgb(155, 75, 75);font-size:0.7em;padding:10px;color: rgb(155, 75, 75); font-weight: 700; margin: 8px 0;}
+.detalhes{ background-color:  rgb(36, 36, 36); color:#fff; padding:12px 45px; margin-top: 3px}
 .destaque article div img{ width: 100%;}
 .div02{border-right :1px solid rgb(177, 177, 177); }
+.div02 h2,p{margin-left: 19px;}
+.div02 p strong{color:rgb(63, 160, 63); font-weight: bold;}
+.div02 .avaliacao{background-color:rgb(63, 160, 63); color:#fff;font-weight: bold; padding: 3px 15px; border-radius: 37%; }
+.div02>h2{font-size:1.3em; font-weight: 800; color: rgb(56, 56, 56);}
 .div03{display:flex; flex-direction: column;}
 .div03>p:first-child, strong {color: rgb(189, 22, 22);}
 .div03>p:first-child>strong{text-decoration-line: line-through;}
 .destaque article {  background-color:rgb(255, 255, 255);padding: 10px; width:70%; height: 250px; }
-.destaque aside{ flex-grow: 1;background-color: rgb(243, 227, 227);padding: 10px;}
+.destaque aside{ height: max-content; background-color: rgb(243, 227, 227);padding: 10px;}
+.destaque aside ul li a { margin:5px 0;color: rgb(36, 36, 36); }
 /* ========================= quebra do layout de tablete  ============================ */
 @media (max-width: 700px){
     
