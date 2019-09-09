@@ -97,6 +97,24 @@ header nav ul li:last-child{margin-right: 0;}
 .destaque aside{ height: max-content; background-color: rgb(243, 227, 227);padding: 10px;}
 .destaque aside ul li a { margin:5px 0;color: rgb(36, 36, 36); }
 /* ========================= quebra do layout de tablete  ============================ */
+/* ========================= Serviços section ===========================================*/
+.servicos{
+    display: flex;
+    flex-direction: row;
+    min-height: 100Vh;
+    background-color: rgb(116, 56, 56);
+    padding: 15px;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+.servicos div{
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+    margin: 5px;
+}
+
 @media (max-width: 700px){
     
 }
