@@ -178,6 +178,10 @@ div>.material-icons, .fas{
     background-color: rgb(36, 36, 36); 
     min-height: 100vh;
     color:rgb(240, 240, 240);
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0 0 0;
+    margin-bottom: 35px;
 }
 .mapacontato>.material-icons{
     color:rgb(240, 240, 240);
@@ -188,6 +192,15 @@ div>.material-icons, .fas{
     padding: 0;
     
     font-size:1.5em;
+}
+.maps{
+    width: 600px;
+    height: 350px;
+    background-image:url('../img/img_maps.png');
+    background-repeat: norepera;
+    border-radius: 5px;
+    margin-bottom:25px; 
+
 }
 
 @media (max-width: 700px){
