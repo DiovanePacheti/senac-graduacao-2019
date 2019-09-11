@@ -108,6 +108,14 @@ header nav ul li:last-child{margin-right: 0;}
     align-items: center;
     align-content: stretch;
 }
+.servicos>h1{
+    padding: 19px 0 48px;
+    font-size:4em;
+    font-weight: 500;
+    color: rgb(82, 82, 82);
+
+
+}
 article{
     display: flex;
     flex-direction: row;
@@ -146,8 +154,15 @@ div:hover>.material-icons{
     padding: 10%;
     font-size: 44px;
 }
+div:hover>.fas{
+    color: #fff; 
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10%;
+    font-size: 44px;
+}
 .servicos div h6{ color: rgb(116, 56, 56); font-weight: 700; margin: 8px 0 13px 0;}
-div>.material-icons{
+div>.material-icons, .fas{
     color: rgb(116, 56, 56);
    
     border: 2px solid rgb(116, 56, 56);
@@ -155,6 +170,24 @@ div>.material-icons{
     padding: 10%;
     font-size: 44px;
 
+}
+/* ===================== Section mapacontato ===================================*/
+.mapacontato{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 36, 36); 
+    min-height: 100vh;
+    color:rgb(240, 240, 240);
+}
+.mapacontato>.material-icons{
+    color:rgb(240, 240, 240);
+}
+.mapacontato>.fas,.fab{
+    color:rgb(240, 240, 240);
+    border:none;
+    padding: 0;
+    
+    font-size:1.5em;
 }
 
 @media (max-width: 700px){
