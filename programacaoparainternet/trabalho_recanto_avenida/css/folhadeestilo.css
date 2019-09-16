@@ -183,24 +183,42 @@ div>.material-icons, .fas{
     padding: 45px 0 0 0;
     margin-bottom: 35px;
 }
-.mapacontato>.material-icons{
+.mapacontato>p{color:#fff; display: inline; margin: 12px ; padding-left:9px;}
+
+.material-icons{
     color:rgb(240, 240, 240);
 }
-.mapacontato>.fas,.fab{
+.mapacontato>p>i .material-icons{
+    color:rgb(240, 240, 240);
+}
+.emailicons{
+    color:rgb(240, 240, 240);
+    border:none;
+    padding: 0;
+    margin-right: 9px;
+    font-size:1.5em;
+}
+.mapacontato>p>i .emailicons, .fab{
     color:rgb(240, 240, 240);
     border:none;
     padding: 0;
     
     font-size:1.5em;
 }
-.maps{
-    width: 600px;
-    height: 350px;
-    background-image:url('../img/img_maps.png');
-    background-repeat: norepera;
+
+.mapacontato>div>iframe{
+    width: 900px;
+    height: 450px;
     border-radius: 5px;
     margin-bottom:25px; 
-
+}
+/* ==================== footer ==============================*/
+footer{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 35px 0;
 }
 
 @media (max-width: 700px){
