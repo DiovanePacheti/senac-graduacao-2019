@@ -16,3 +16,19 @@ strong{
     font-weight: 600;
     color: #fff;
 }
+section article:last-child{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 3em;
+    
+}
+section article a{
+    color: #009688;
+    padding: 8% 0;
+}
+
+section article:last-child:hover{
+    background-color: #363b3b;
+    
+}
