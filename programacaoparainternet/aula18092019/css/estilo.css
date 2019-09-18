@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family= Tajawal & display = swap');
+.titulo{
+    font-family: 'Tajawal', sans-serif;
+}
+ul{
+    margin-left: auto;
+
+}
+nav>a>img{
+    width: 78px;
+    border-radius: 50%;
+}
+.ig>img{
+    width: 100%;
+
+}
+.fundogradiente{
+        background-color: #FAACA8;
+        background-image: linear-gradient(0deg, #FAACA8 0%, #DDD6F3 100%);
+}
+
+header{
+    min-height: 400px;
+}
