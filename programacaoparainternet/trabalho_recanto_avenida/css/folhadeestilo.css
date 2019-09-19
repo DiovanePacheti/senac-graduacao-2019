@@ -76,7 +76,7 @@ header nav ul li:last-child{margin-right: 0;}
     
     min-height: 75vh;
 }
-.destaque article { display: flex; flex-direction: ; border-radius: 3px; box-shadow:1px 1px 5px rgb(75, 75, 75)} 
+.destaque article { display: flex; border-radius: 3px; box-shadow:1px 1px 5px rgb(75, 75, 75)} 
 .destaque article div {height: 100%;}
 .destaque article .div02, .div03{ flex-grow:2; align-items: center;padding:13px 3px ;}
 .destaque article .div01{ flex-grow:20;}
