@@ -29,4 +29,26 @@ nav{
 header{
     min-height: 400px;
 }
+.tratamentobeleza{
+    padding-top: 55px;
+}
+h2.titulopg{
+    font-size:4em;
+    margin-bottom:2px;
+    color:rgb(46, 13, 13);
+    font-weight: 700;
 
+}
+.tratamentobeleza>div{
+    padding-top: 75px;
+}
+.fundoformulario{
+    background-color:rgb(46, 13, 13);
+    height: 100vw;
+    padding-top: 8%;
+}
+label{
+    color: #fff;
+    font-weight: 700;
+    
+}
