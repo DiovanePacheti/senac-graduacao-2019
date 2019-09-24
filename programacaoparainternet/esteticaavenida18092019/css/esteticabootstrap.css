@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family= Tajawal & display = swap');
+.titulo{
+    font-family: 'Tajawal', sans-serif;
+}
+.carousel-caption>p,h3{
+    text-shadow:2px 2px 2px rgb(72, 70, 80);
+}
+ul{
+    margin-left: auto;
+ 
+}
+nav>a>img{
+    width: 78px;
+    border-radius: 50%;
+}
+.ig>img{
+    width: 100%;
+ 
+}
+nav{
+    background-color: rgba(73, 49, 61, 0.7);
+}
+.fundogradiente{
+        background-color: #FAACA8;
+        background-image: linear-gradient(0deg, #FAACA8 0%, #DDD6F3 100%);
+}
+
+ 
+header{
+    min-height: 400px;
+}
+.tratamentobeleza{
+    padding-top: 55px;
+}
+h2.titulopg{
+    font-size:4em;
+    margin-bottom:2px;
+    color:rgb(46, 13, 13);
+    font-weight: 700;
+
+}
+.tratamentobeleza>div{
+    padding-top: 75px;
+}
+.fundoformulario{
+    background-color:rgb(46, 13, 13);
+    height: 100vw;
+    padding-top: 8%;
+}
+label{
+    color: #fff;
+    font-weight: 700;
+    
+}

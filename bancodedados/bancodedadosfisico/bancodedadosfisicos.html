@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Banco de Dados I</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="img/icone.png">
+  <link rel="stylesheet" type="text/css" href="../cssLogica/logica.css">
+  <style>
+  p{
+      background-color: rgb(56, 68, 78);
+      color: rgb(226, 226, 226);
+      padding: 2px 0 2px 4px;
+      border-radius: 5px;
+  }
+  </style>  
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Tabela empregado</h1>
+
+            <article>
+                <pre>
+                        mysql -u root -p
+
+                        DROP DATABASE IF EXISTS empregado;
+                        CREATE DATABASE IF NOT EXISTS empregado;
+                        USE empregado;
+                        
+                        CREATE TABLE empregado (
+                            codigo Integer NOT NULL,
+                            nome CHAR(40) NOT NULL,
+                            setor CHAR(2),
+                            cargo CHAR(20),
+                            salario DECIMAL(10,2),
+                            PRIMARY KEY (codigo)
+                        );
+                        
+                        INSERT INTO empregado VALUES (1,'Cleide Campos','1','Secretária',1000);
+                        INSERT INTO empregado VALUES (3,'Andreia Batista','6','Programadora',1500);
+                        INSERT INTO empregado VALUES (4,'Cristiano Souza','6','Programador',1500);
+                        INSERT INTO empregado VALUES (6,'Mario Souza','4','Analista',2200);
+                        INSERT INTO empregado VALUES (7,'Ana Silva','4','Secretária',1000);
+                        INSERT INTO empregado VALUES (9,'Silvia Soares','5','Supervisora',1650);
+                        INSERT INTO empregado VALUES (10,'José da Silva','1','Programador',1500);
+                        INSERT INTO empregado VALUES (15,'Manoel Batista','1','Projetista',2500);
+                        INSERT INTO empregado VALUES (25,'João Silva','4','Supervisor',1650);
+                        
+                </pre>
+            </article>
+
+            <article>
+                <p>
+                    mysql -u root -p;
+                </p>
+            </article>
+            <article>
+                <p>Apresentar lista completa</p>
+                SELECT * 
+                FROM empregado;
+                <p>Apresntando nome e salario da tabela em ordem crescente</p>
+                SELECT nome, salario 
+                FROM empregado 
+                ORDER BY nome ASC;
+                <p>Apresenatado nome e salario em ordem decrescente</p>
+                SELECT nome, salrio 
+                FROM empregado 
+                ORDEM BY nome DESC
+                <p>Apresentando setores e nomes colocando por ordem ascendente do campo setor e descendente do campo nome</p>
+                SELECT setor, nome 
+                FROM empregado 
+                ORDER BY setor ASC, nome DESC;
+                <p>Listagem de nomes ordenados pelo campo nome em formato ascendente, dos empregados do setor 4.</p> 
+
+                <p>O empregado de código 7 teve um aumento de salário para 2500,50.</p>
+                UPDATE empregado
+                SET salario = 2500,50
+                WHERE(codigo = 7);
+                <p>Andreia Batista foi transferida do departamento 5 para o departamento 3</p>
+                UPDATE empregado SET setor = "3" WHERE (nome = "Andreia Batista");
+                <p>Todos os empregados da empresa tiveram um aumento de salário de 20%.</p>
+                UPDATE empregado SET salario = salario + 1.2;
+                UPDATE empregado SEt salario = (salario + 20/100);
+                <p>buscando um campo especifico da tabela</p>
+                SELECT * 
+                FROM empregado 
+                WHERE (nome = "Ana Silva");
+                <p>fazendo alteração do nome a empregada de </p>
+                UPDATE empregado 
+                SET nome = "Suzana Silva" 
+                WHERE nome = "Ana Silva";
+                <p>Alterando nome pela chave primaria </p>
+                UPDATE empregado 
+                SET nome = "Jose da Silva " 
+                WHERE codigo = 10;
+                <p>Deletando todos os empregados do setor 5</p>
+                DELETE FROM empregado 
+                WHERE (setor =  "5");
+                <p></p>
+                SELECT * 
+                FROM empregado 
+                WHERE (setor = "1")
+            </article>
+        </div>
+    </div>
+    <!-- Scripts e links javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+

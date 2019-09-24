@@ -1,0 +1,34 @@
+@import url('../css/home.css');
+
+img{width: 100%; margin-bottom:8%; box-shadow: 1px 1px 5px #000;}
+
+h1{color: #009688;}
+.container{
+    display: flex;
+    flex-direction:column;
+}
+
+strong{
+    background-color: #4a5f5d;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 0 2px;
+    font-weight: 600;
+    color: #fff;
+}
+section article:last-child{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 3em;
+    
+}
+section article a{
+    color: #009688;
+    padding: 8% 0;
+}
+
+section article:last-child:hover{
+    background-color: #363b3b;
+    
+}
