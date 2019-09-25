@@ -1,0 +1,29 @@
+*{margin:0}
+nav{
+    background-color: rgb(194, 61, 61);
+    color:#fff;
+    padding: 10px;
+}
+.fundoverde{
+    background-color: rgba(11, 59, 11,0.7);
+    height: 100%;
+    width: 100%;
+}
+section{
+    background-image: url('img/img_fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+   
+    
+}
+.card{
+    width: 550px;
+    height: 500px;
+    margin-left: 50%;
+}
+
