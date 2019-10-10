@@ -1,0 +1,10 @@
+i, p{
+    color: rgb(53, 98, 128);
+}
+
+.fundo{
+    background-color: rgb(215, 219, 236);
+}
+section{
+    min-height: 90vh;
+}

@@ -1,0 +1,10 @@
+.fundo_azul_nav{
+    background-color:#001124;
+}
+ul>li.nav-item>a{
+    color: #fff;
+    font-size:0.8em;
+}
+.dit{
+    margin-left: -9px;
+    margin-right:8px; 
