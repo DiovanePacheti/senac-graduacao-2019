@@ -6,43 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">  
+    
     <title>Lancheria Avenida</title>
 </head>
 <body>
 
-        <div class="jumbotron text-center">
-                <h1>My First Bootstrap Page</h1>
-                <p>Resize this responsive page to see the effect!</p> 
+              <div class="jumbotron text-left">
+                <h1>Lancheria Avenida</h1>
+                <h3>Controle de pedidos :</h3> 
               </div>
               
-              <div class="container form-group">
+              <div class="container">
                 <div class="row">
                   <div class="col-sm-4 ">
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="inBauru" name="parteUmFormulario" value="customEx">
-                                    <label class="custom-control-label" for="parteUmFormulario">Bauru</label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" id="inBauru" name="parteUmFormulario" >Bauru
+                                    </label>
+                                  
                                 </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="inTorrada" name="parteUmFormulario" value="customEx">
-                                    <label class="custom-control-label" for="parteUmFormulario">Torrada</label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" id="inTorrada" name="parteUmFormulario" >Torrada
+                                    </label>
+                                  
                                 </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="inCachorroQuente" name="parteUmFormulario" value="customEx">
-                                    <label class="custom-control-label" for="parteUmFormulario">Cachorro Quente</label>
-                                </div>       
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" id="inCachorroQuente" name="parteUmFormulario" >Cachorro Quente
+                                    </label>
+                                  
+                                </div>     
                   </div>
                   <div class="col-sm-4">
-                    <h3>Column 2</h3>
-                    <p>Lorem ipsum dolor..</p>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" id="ckBatataFrita" class="form-check-input">Batata Frita
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" id="ckOvo" class="form-check-input">Ovo
+                          </label>
+                        </div>
                   </div>
                   <div class="col-sm-4">
-                    <h3>Column 3</h3> 
-                    <p>Lorem ipsum dolor..</p>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="inRefrigerante" name="bebidas" >Refrigerante
+                          </label>
+                        
+                      </div>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="inSuco" name="bebidas" >Suco
+                          </label>
+                        
+                      </div>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                          <input type="radio" class="form-check-input" id="inAgua" name="bebidas" >Agua
+                          </label>
+                        
+                      </div>
                   </div>
-                </div>
+                </div><!-- fim da linha do formulario-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <button class="btn bg-warning">Ver Pedido</button>
+                  </div>
+                </div><!--fim da segunda linha do button-->
+                <div class="row">
+                    <div class="col-sm-4 ">
+                       <div>
+                          <i class="fas fa-hamburger" style="font-size: 8em;"></i>
+                       </div> 
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                           <i class="fas fa-glass-whiskey" style="font-size: 8em;"></i>
+                        </div> 
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                          <h4 id="outTotal">R$</h4>
+                        </div>
+                    </div>
+                  </div><!-- fim da linha do formulario-->
+
               </div>
     
+              <script src="js/lancheria.js"></script>
 
               <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
