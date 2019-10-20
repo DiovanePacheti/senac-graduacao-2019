@@ -16,7 +16,7 @@ var num = 0;
 function adicionaFruta(fruta){
     //criar um elemento na pagina
     var novaImagem = document.createElement('img');
-    novaImagem.src = fruta + ".jpg";
+    novaImagem.src = "../../img/jogoDasFrutas" + fruta + ".png";
     novaImagem.textAlt = 'Imagem de ' + fruta;
     novaImagem.className = "img-" + fruta;
  
@@ -27,7 +27,6 @@ function adicionaFruta(fruta){
  
     novaImagem.onclick = function() {
         removerFruta('img' + num) 
-       // num--
     } 
  
     //indica que o elemento criado e filho de divJogo
@@ -42,7 +41,7 @@ function adicionaFruta(fruta){
 inBanana.addEventListener('click', function(){ adicionaFruta('Banana') }) //chamando a função que adicionaFruta() 
 inMorango.addEventListener('click', function(){ adicionaFruta('Morango') }) //chamando a função que adicionaFruta() 
 inLaranja.addEventListener('click', function(){ adicionaFruta('Laranja') }) //chamando a função que adicionaFruta() 
-inMaca.addEventListener('click', function(){ adicionaFruta('Maçã') }) //chamando a função que adicionaFruta() 
+inMaca.addEventListener('click', function(){ adicionaFruta('Maca') }) //chamando a função que adicionaFruta() 
 inUva.addEventListener('click', function(){ adicionaFruta('Uva') }) //chamando a função que adicionaFruta() 
  
 //funçao que remove frutas

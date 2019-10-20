@@ -1,9 +1,9 @@
 #divFrutas > img, #divJogo > img{ cursor: pointer;} /* Quando passar o mouse para fica com forma de ponteiro*/
  
-.img-banana{  width: 70px;}
-.img-morango{  width: 70px;}
-.img-laranja{  width: 70px;}
-.img-maca{  width: 70px;}
-.img-uva{  width: 70px;}
+.img-Banana{  width: 50px;height: 50px;}
+.img-Morango{  width: 70px;}
+.img-Laranja{  width: 70px;}
+.img-Maca{  width: 70px;}
+.img-Uva{  width: 70px;}
  
 .altura{height: 100px;}
