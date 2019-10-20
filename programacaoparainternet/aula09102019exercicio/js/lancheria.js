@@ -10,14 +10,14 @@ var ckOvo = document.getElementById("ckOvo");
 //define uma funçao pra alterar a foto 
 function lanchePrincipal(){
     //se radio buttom(rbka) estiver selecionado(marcado)
-    if(rbka.checked){
-        i.class = "fas fa-hamburger"
+    if(inBauru.checked){
+        i.className = "fas fa-hamburger";
         preco =  45000;
-    }else if( rbfiesta.checked){
-        i.class = "fas fa-hotdog";s
+    }else if( inCachorroQuente.checked){
+        i.className = "fas fa-hotdog";
         preco = 49800;
     }else{
-        imgcarro.src = "img/focus.png"
+        i.className = "fas fa-hamburger";
         preco = 61200;
     }
     //resetando as caixas de checkbox cada vez que for trocado a foto do veiculo 
@@ -34,5 +34,5 @@ inBauru.addEventListener('change', lanchePrincipal);
 inTorrada.addEventListener('change', lanchePrincipal);
 inCachorroQuente.addEventListener('change', lanchePrincipal);
 
-ckPintura.addEventListener('change', somarPintura);
-ckAlarme.addEventListener('change', somarAlarme);
+//ckPintura.addEventListener('change', somarPintura);
+//ckAlarme.addEventListener('change', somarAlarme);
