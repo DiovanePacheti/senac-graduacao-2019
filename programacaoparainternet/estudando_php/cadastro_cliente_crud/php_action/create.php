@@ -7,14 +7,21 @@ require_once 'db_connect.php';
 
 //Clear - xss(cross site scripting) --
 function clear($input){
-    $var = mysqli_escape_string($input);
+    global $connect;
+    //protegendo sql injection
+    $var = mysqli_escape_string($connect, $input);
+    
+    //xss
+    $var = htmlspecialchars($var);
+
+    return $var;
 }
 //se houver algo setado na variavel $_POST[] no indice btn-cadastrar
 if(isset($_POST['btn-cadastrar'])){
-    $nome = mysqli_escape_string($connect, $_POST['nome']);
-    $sobrenome = mysqli_escape_string($connect, $_POST['sobrenome']);
-    $email = mysqli_escape_string($connect, $_POST['email']);
-    $anonasc = mysqli_escape_string($connect, $_POST['anonasc']);
+    $nome = clear($_POST['nome']);
+    $sobrenome = clear($_POST['sobrenome']);
+    $email = clear($_POST['email']);
+    $anonasc = clear($_POST['anonasc']);
 
     $sql ="INSERT INTO clientes (nome, sobrenome, email, anonasc) 
     VALUES('$nome', '$sobrenome', '$email', '$anonasc')";
