@@ -8,7 +8,7 @@ public $idade;
 
 //metodo
 public function falar(){
-    echo "falou";
+    echo $this->nome." de ".$this->idade." acabou de falar";
 }//fimdo method falar
 
 
