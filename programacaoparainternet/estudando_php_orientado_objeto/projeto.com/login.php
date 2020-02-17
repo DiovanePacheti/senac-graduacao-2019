@@ -12,7 +12,9 @@ class Login{
         $this->setSenha($senha);
         $this->setNome($nome);  
     }//fim do construct
-    public function getEmail(){ return $this->nome;}
+    public function getNome(){
+         return $this->nome;
+    }
     public function setNome($no){
         $nome = filter_var($no, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $this->nome = $nome;
@@ -51,7 +53,8 @@ $novoLogin = new Login("teste/\()@gmail.com", "123456", "Diovane Luis");
 
 $novoLogin->logar();
 echo "<br>";
-echo $novoLogin->getEmail();
+echo "Ola ".$novoLogin->getNome();
+//echo $novoLogin->getEmail();
 echo "<br>";
-echo $novoLogin->getSenha();
+//echo $novoLogin->getSenha();
 ?>
