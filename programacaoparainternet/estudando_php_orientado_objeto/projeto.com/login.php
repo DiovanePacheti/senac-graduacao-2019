@@ -3,7 +3,20 @@ class Login{
     //Atributos
     public $email;
     public $senha;
+    public $nome;
 
+
+    //construtor
+    public function __construct($email, $senha, $nome){
+        $this->setEmail($email);
+        $this->setSenha($senha);
+        $this->setNome($nome);  
+    }//fim do construct
+    public function getEmail(){ return $this->nome;}
+    public function setNome($no){
+        $nome = filter_var($no, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $this->nome = $nome;
+    }
     public function getEmail(){
         return $this->email;
     }
@@ -34,10 +47,8 @@ class Login{
 
 
 //ISNTANCIANDO CLASSE LOGIN
-$novoLogin = new Login();
+$novoLogin = new Login("teste/\()@gmail.com", "123456", "Diovane Luis");
 
-$novoLogin->setEmail("teste/\()@gmail.com");
-$novoLogin->setSenha("123456");
 $novoLogin->logar();
 echo "<br>";
 echo $novoLogin->getEmail();
