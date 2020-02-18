@@ -1,37 +1,93 @@
 @import url("../../css/home.css");
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da&display=swap');
-.sessaologica{ background-color:#bbdefb;}
-.imagresponsiva{ width:100%;}
-a{color:#757575; font-family: 'Baloo Da', cursive;text-transform: uppercase; font-weight: 100;}
-.tamanhoh2{ font-size: 100%; }
 
-h1{ color: #006064 ;}
+/*.sessaologica{ background-color:#bbdefb;} fundo cor do livro do professor*/
 
-h2, h3, p { color: #37474f;}
-p.pergunta{color:#37474f;
-  font-size:1em;
-  font-weight: 100;}
-pre.resposta{font-size: 100%; margin:0; text-align: center; background-color: #37474f; padding: 0;}
-input{ text-align: center;}
+.sessaologica {
+    background-color: #ffeb3b;
+}
 
-section.linha{ background-color: ; border-top:1px solid #000;}
+.imagresponsiva {
+    width: 100%;
+}
 
+a {
+    color: #000;
+    font-family: 'Baloo Da', cursive;
+    text-transform: uppercase;
+    font-weight: 100;
+}
 
-pre.fundo{ background-color:#009688; color: #000; font-size :60%;}
-pre{ color:#fff; background-color:#212121; width:100%; font-size:70%; padding:8px;}
+.tamanhoh2 {
+    font-size: 100%;
+}
 
-span{ color:#4e342e;}
+h1 {
+    color: #006064;
+}
+
+h2,
+h3,
+p {
+    color: #37474f;
+}
+
+p.pergunta {
+    color: #37474f;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+pre.resposta {
+    font-size: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: #37474f;
+    padding: 0;
+}
+
+input {
+    text-align: center;
+}
+
+section.linha {
+    /*background-color: ;*/
+    border-top: 1px solid #000;
+}
+
+pre.fundo {
+    background-color: #009688;
+    color: #000;
+    font-size: 60%;
+}
+
+pre {
+    color: #fff;
+    background-color: #212121;
+    width: 100%;
+    font-size: 70%;
+    padding: 8px;
+}
+
+span {
+    color: #4e342e;
+}
+
 
 /*criando espaçamento entre os botoes */
-.botaoEspaços{ margin-left: 5%;}
+
+.botaoEspaços {
+    margin-left: 5%;
+}
+
 
 /* tarefa criar um template do restaurante */
-.botaolevaaotrabalho{
-  margin: 5% auto ;
-}
-.botaolevaaotrabalho, a{
-  text-align: center;
+
+.botaolevaaotrabalho {
+    margin: 5% auto;
 }
 
-
-
+.botaolevaaotrabalho,
+a {
+    text-align: center;
+}
