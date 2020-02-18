@@ -13,4 +13,5 @@
 
     echo $nCarro->getCor();
     echo $nCarro->parar();
+    var_dump($nCarro);
 ?>
