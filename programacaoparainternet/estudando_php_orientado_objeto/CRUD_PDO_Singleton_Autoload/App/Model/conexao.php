@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Model;
+
     class Conexao{
         private static $instance;
 

@@ -12,5 +12,5 @@
 
       
 
-
+/**OBS comando do composer para rodar o autoload "composer dump-autoload" */
 ?>
