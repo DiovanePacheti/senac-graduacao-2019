@@ -1,0 +1,15 @@
+{
+    "name": "estudo/composer",
+    "description": "teste composer",
+    "require": {
+        "dompdf/dompdf": "^0.8.4",
+        "pagseguro/pagseguro-php-sdk": "^6.0",
+        "cocur/slugify": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "Diovane Luis",
+            "email": "frontendestudo@gmail.com"
+        }
+    ]
+}
